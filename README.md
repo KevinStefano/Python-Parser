@@ -4,16 +4,16 @@ IF2124 - Teori Bahasa Formal dan Otomata
 ## Terminals
 - Identifiers (Variables, Functions, Classes) (lowercase, uppercase, digits, underscore)
 - Values
-  - Strings
-  - Numbers
+  - Strings (''; ""; ''' ''')
+  - Numbers (Integers, Decimals)
 - Keywords
   - True (Boolean)
   - False (Boolean)
   - None (Object)
-  - and (Boolean operator)
-  - or (Boolean operator)
-  - not (Boolean operator)
-  - is (Comparison operator)
+  - and (Logical operator)
+  - or (Logical operator)
+  - not (Logical operator)
+  - is (Identity operator)
   - class (Classes)
   - def (Functions)
   - return (Functions)
@@ -31,6 +31,24 @@ IF2124 - Teori Bahasa Formal dan Otomata
   - raise (error handling)
   - with (misc.)
   - pass (misc.)
+- Brackets
+  - "( )" Parentheses (tuples, order of operations, generator expressions, function calls and other syntax)
+  - "[ ]" Square Brackets (mutable data types and for indexing/lookup/slicing)
+  - "{ }" Curly Brackets (dictionaries and sets)
+ - Operators
+  - Arithmetic operators (+, -, *, /, %, **, //)
+  - Assignment operators (=, +=, -=, *=, /=, %=, **=, //=, &=, |=, ^=, >>=, <<=)
+  - Comparison operators (==, !=, <, >, <=, >=)
+  - Logical operators (see keywords)
+  - Identity operators (see keywords)
+  - Membership operators (in - see keywords)
+  - Bitwise operators (&, |, ^, <<, >>, ~)
+ - Comments (#)
+ - Newline (\n)
+ - Indentation (\t)
+ - Function output type (Bonus) (->)
+ - Block of code indicator (:)
+ - Dot operator (. - Access attributes and methods)
 
 ## Variables (CFG)
 
