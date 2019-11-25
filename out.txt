@@ -1,0 +1,197 @@
+ArithmeticOperation -> Number Bin2 
+ArithmeticOperator -> + 
+ArithmeticOperator -> - 
+ArithmeticOperator -> * 
+ArithmeticOperator -> / 
+ArithmeticOperator -> % 
+ArithmeticOperator -> ** 
+ArithmeticOperator -> // 
+AssignmentOperation -> Idenifier Bin3 
+AssignmentOperator -> = 
+AssignmentOperator -> += 
+AssignmentOperator -> -= 
+AssignmentOperator -> *= 
+AssignmentOperator -> /= 
+AssignmentOperator -> %= 
+AssignmentOperator -> **= 
+AssignmentOperator -> //= 
+AssignmentOperator -> &= 
+AssignmentOperator -> |= 
+AssignmentOperator -> ^= 
+AssignmentOperator -> >>= 
+AssignmentOperator -> <<= 
+Atom -> Decimal Bin1 
+Atom -> Term- NaturalNumber 
+Atom -> Digit NaturalNumber 
+Atom -> 0 
+Atom -> 1 
+Atom -> 2 
+Atom -> 3 
+Atom -> 4 
+Atom -> 5 
+Atom -> 6 
+Atom -> 7 
+Atom -> 8 
+Atom -> 9 
+Atom -> True 
+Atom -> False 
+Atom -> Integer Term. 
+Atom -> Integer Bin0 
+Atom -> Number Bin2 
+Atom -> Atom Bin4 
+Atom -> Atom Bin5 
+Bin0 -> Term. NaturalNumber 
+Bin1 -> TermE Integer 
+Bin2 -> ArithmeticOperator Number 
+Bin3 -> AssignmentOperator Literal 
+Bin4 -> ComparisonOperator Atom 
+Bin5 -> Decimal Bin1 
+Bin5 -> Term- NaturalNumber 
+Bin5 -> Digit NaturalNumber 
+Bin5 -> 0 
+Bin5 -> 1 
+Bin5 -> 2 
+Bin5 -> 3 
+Bin5 -> 4 
+Bin5 -> 5 
+Bin5 -> 6 
+Bin5 -> 7 
+Bin5 -> 8 
+Bin5 -> 9 
+Bin5 -> True 
+Bin5 -> False 
+Bin5 -> Integer Term. 
+Bin5 -> Integer Bin0 
+Bin5 -> Number Bin2 
+Bin5 -> Atom Bin4 
+Bin5 -> Atom Bin5 
+Bin6 -> Termis Atom 
+Bin7 -> Termin Iterable 
+Bin8 -> BitwiseOperator Integer 
+Bin9 -> BitshiftOperator NaturalNumber 
+BinaryOperation -> Term~ BinaryOperation 
+BinaryOperation -> Integer Bin8 
+BinaryOperation -> Integer Bin9 
+BitshiftOperation -> Integer Bin9 
+BitshiftOperator -> << 
+BitshiftOperator -> >> 
+BitwiseOperation -> Integer Bin8 
+BitwiseOperator -> & 
+BitwiseOperator -> | 
+BitwiseOperator -> ^ 
+Boolean -> True 
+Boolean -> False 
+Boolean -> Atom Bin4 
+Boolean -> Atom Bin5 
+ComparisonOperation -> Atom Bin4 
+ComparisonOperator -> == 
+ComparisonOperator -> != 
+ComparisonOperator -> < 
+ComparisonOperator -> > 
+ComparisonOperator -> <= 
+ComparisonOperator -> => 
+Decimal -> Integer Term. 
+Decimal -> Integer Bin0 
+Digit -> 0 
+Digit -> 1 
+Digit -> 2 
+Digit -> 3 
+Digit -> 4 
+Digit -> 5 
+Digit -> 6 
+Digit -> 7 
+Digit -> 8 
+Digit -> 9 
+IdentityOperation -> Atom Bin6 
+Integer -> Term- NaturalNumber 
+Integer -> Digit NaturalNumber 
+Integer -> 0 
+Integer -> 1 
+Integer -> 2 
+Integer -> 3 
+Integer -> 4 
+Integer -> 5 
+Integer -> 6 
+Integer -> 7 
+Integer -> 8 
+Integer -> 9 
+Integer -> True 
+Integer -> False 
+Integer -> Atom Bin4 
+Integer -> Atom Bin5 
+Literal -> Decimal Bin1 
+Literal -> Term- NaturalNumber 
+Literal -> Digit NaturalNumber 
+Literal -> 0 
+Literal -> 1 
+Literal -> 2 
+Literal -> 3 
+Literal -> 4 
+Literal -> 5 
+Literal -> 6 
+Literal -> 7 
+Literal -> 8 
+Literal -> 9 
+Literal -> True 
+Literal -> False 
+Literal -> Integer Term. 
+Literal -> Integer Bin0 
+Literal -> Number Bin2 
+Literal -> Atom Bin4 
+Literal -> Atom Bin5 
+LogicalOperation -> Atom Bin5 
+LogicalOperator -> and 
+LogicalOperator -> or 
+LogicalOperator -> not 
+MembershipOperation -> Atom Bin7 
+NaturalNumber -> Digit NaturalNumber 
+NaturalNumber -> 0 
+NaturalNumber -> 1 
+NaturalNumber -> 2 
+NaturalNumber -> 3 
+NaturalNumber -> 4 
+NaturalNumber -> 5 
+NaturalNumber -> 6 
+NaturalNumber -> 7 
+NaturalNumber -> 8 
+NaturalNumber -> 9 
+NaturalNumber -> True 
+NaturalNumber -> False 
+NaturalNumber -> Atom Bin4 
+NaturalNumber -> Atom Bin5 
+NonZeroDigit -> 1 
+NonZeroDigit -> 2 
+NonZeroDigit -> 3 
+NonZeroDigit -> 4 
+NonZeroDigit -> 5 
+NonZeroDigit -> 6 
+NonZeroDigit -> 7 
+NonZeroDigit -> 8 
+NonZeroDigit -> 9 
+Number -> Decimal Bin1 
+Number -> Term- NaturalNumber 
+Number -> Digit NaturalNumber 
+Number -> 0 
+Number -> 1 
+Number -> 2 
+Number -> 3 
+Number -> 4 
+Number -> 5 
+Number -> 6 
+Number -> 7 
+Number -> 8 
+Number -> 9 
+Number -> True 
+Number -> False 
+Number -> Integer Term. 
+Number -> Integer Bin0 
+Number -> Number Bin2 
+Number -> Atom Bin4 
+Number -> Atom Bin5 
+S0 -> NonZeroDigit 
+Term- -> - 
+Term. -> . 
+TermE -> E 
+Termin -> in 
+Termis -> is 
+Term~ -> ~ 

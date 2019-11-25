@@ -1,0 +1,24 @@
+NonZeroDigit -> '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'
+Digit -> '0' | NonZeroDigit
+NaturalNumber -> Digit | Digit NaturalNumber | Boolean
+Integer -> NaturalNumber | '-' NaturalNumber
+Decimal -> Integer '.' | Integer '.' NaturalNumber
+Boolean -> 'True' | 'False' | ComparisonOperation | LogicalOperation
+Number -> Integer | Decimal | Decimal 'E' Integer | ArithmeticOperation
+Literal -> Number | String
+Atom -> Identifier | Literal
+ArithmeticOperator -> '+' | '-' | '*' | '/' | '%' | '**' | '//'
+ArithmeticOperation -> Number ArithmeticOperator Number
+AssignmentOperator -> '=' | '+=' | '-=' | '*=' | '/=' | '%=' | '**=' | '//=' | '&=' | '|=' | '^=' | '>>=' | '<<='
+AssignmentOperation -> Idenifier AssignmentOperator Literal
+ComparisonOperator -> '==' | '!=' | '<' | '>' | '<=' | '=>'
+ComparisonOperation -> Atom ComparisonOperator Atom
+LogicalOperator -> 'and' | 'or' | 'not' | e
+LogicalOperation -> Atom LogicalOperator Atom
+IdentityOperation -> Atom 'is' Atom
+MembershipOperation -> Atom 'in' Iterable
+BitwiseOperator -> '&' | '|' | '^'
+BitwiseOperation -> Integer BitwiseOperator Integer
+BitshiftOperator -> '<<' | '>>'
+BitshiftOperation -> Integer BitshiftOperator NaturalNumber
+BinaryOperation -> BitwiseOperation | BitshiftOperation | '~' BinaryOperation
