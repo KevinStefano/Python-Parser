@@ -240,7 +240,7 @@ def generate_cnf () -> (list, list):
             term.append(prod)
         else:
             var.append(prod)
-    return (term, var)
+    return term, var
 
 
 if __name__ == "__main__":
