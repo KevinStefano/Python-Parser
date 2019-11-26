@@ -38,10 +38,9 @@ class CYK:
 
                     for production in self.variable:
                         for left in left_cell:
-                            if left:
-                                for right in right_cell:
-                                    if left == production.result[0].value and right == production.result[1].value:
-                                        self.table[words - 1][cell].append(production.name)                     
+                            for right in right_cell:
+                                if left == production.result[0].value and right == production.result[1].value:
+                                    self.table[words - 1][cell].append(production.name)                     
 
         return self.table
 
@@ -57,7 +56,6 @@ class CYK:
 
 if __name__ == "__main__":
     inp = ReadFile()
-    print(inp)    
     frozen2 = CYK(inp)
     frozen2.grammar_from_CNF(generate_cnf())
     frozen2.compute()

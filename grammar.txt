@@ -29,8 +29,8 @@ Identifier -> Variable | Function
 
 Newline -> '\n'
 Indentation -> '\t' | Indentation '\t'
-StringAcceptedCharacters = 'Abjad' | 'UnknownChar' | Identifier | Number
-StringLoop -> StringAcceptedCharacters StringLoop
+StringAcceptedCharacters -> 'Abjad' | 'UnknownChar' | Identifier | Number | '+' | '-' | ':' | '*' | '/' | '=' | '>' | '<' | '?' | '|' | '&' | '^' | '%' | '$' | '#' | '!' | '~' | '`' | '\\' | '@' | '_' | '{' | '}' | '(' |  ')' | '[' | ']' | '.' | '"' | ',' | "'"
+StringLoop -> StringAcceptedCharacters StringLoop | e
 StringWithEnterLoop -> StringAcceptedCharacters StringWithEnterLoop | Newline StringWithEnterLoop
 String -> '"' StringLoop '"' | ''' StringLoop ''' | ''' ''' ''' StringWithEnterLoop ''' ''' ''' | '"' '"' '"' StringWithEnterLoop '"' '"' '"' | StringOperation
 (String) -> String | '(' String ')'
@@ -48,7 +48,7 @@ DictionaryLoop -> DictKey ':' DictVal ',' DictionaryLoop | DictKey ':' DictVal |
 Dictionary -> '{' DictionaryLoop '}'
 
 Bracket -> List | Tuple | Curly
-Literal -> Numbers | Strings | List | Tuple | Dictionary | Iterable Slicer | None
+Literal -> Numbers | String | List | Tuple | Dictionary | Iterable Slicer | None
 Atom -> Identifier | Literal | '(' Atom ')'
 
 

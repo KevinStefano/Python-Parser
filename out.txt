@@ -1,3 +1,58 @@
+#IdentifierTail -> Abjad 
+#IdentifierTail -> _ 
+#IdentifierTail -> 0 
+#IdentifierTail -> 1 
+#IdentifierTail -> 2 
+#IdentifierTail -> 3 
+#IdentifierTail -> 4 
+#IdentifierTail -> 5 
+#IdentifierTail -> 6 
+#IdentifierTail -> 7 
+#IdentifierTail -> 8 
+#IdentifierTail -> 9 
+#IdentifierTail -> True 
+#IdentifierTail -> False 
+(Identifier) -> Abjad 
+(Identifier) -> _ 
+(Integer) -> 0 
+(Integer) -> 1 
+(Integer) -> 2 
+(Integer) -> 3 
+(Integer) -> 4 
+(Integer) -> 5 
+(Integer) -> 6 
+(Integer) -> 7 
+(Integer) -> 8 
+(Integer) -> 9 
+(Integer) -> True 
+(Integer) -> False 
+(NaturalNumber) -> 0 
+(NaturalNumber) -> 1 
+(NaturalNumber) -> 2 
+(NaturalNumber) -> 3 
+(NaturalNumber) -> 4 
+(NaturalNumber) -> 5 
+(NaturalNumber) -> 6 
+(NaturalNumber) -> 7 
+(NaturalNumber) -> 8 
+(NaturalNumber) -> 9 
+(NaturalNumber) -> True 
+(NaturalNumber) -> False 
+(Number) -> 0 
+(Number) -> 1 
+(Number) -> 2 
+(Number) -> 3 
+(Number) -> 4 
+(Number) -> 5 
+(Number) -> 6 
+(Number) -> 7 
+(Number) -> 8 
+(Number) -> 9 
+(Number) -> True 
+(Number) -> False 
+(Variable) -> Abjad 
+(Variable) -> _ 
+Abjad -> Abjad 
 Abjad -> A 
 Abjad -> B 
 Abjad -> C 
@@ -76,60 +131,6 @@ AbjadLowerCase -> w
 AbjadLowerCase -> x 
 AbjadLowerCase -> y 
 AbjadLowerCase -> z 
-AbjadNumber -> A 
-AbjadNumber -> B 
-AbjadNumber -> C 
-AbjadNumber -> D 
-AbjadNumber -> E 
-AbjadNumber -> F 
-AbjadNumber -> G 
-AbjadNumber -> H 
-AbjadNumber -> I 
-AbjadNumber -> J 
-AbjadNumber -> K 
-AbjadNumber -> L 
-AbjadNumber -> M 
-AbjadNumber -> N 
-AbjadNumber -> O 
-AbjadNumber -> P 
-AbjadNumber -> Q 
-AbjadNumber -> R 
-AbjadNumber -> S 
-AbjadNumber -> T 
-AbjadNumber -> U 
-AbjadNumber -> V 
-AbjadNumber -> W 
-AbjadNumber -> X 
-AbjadNumber -> Y 
-AbjadNumber -> Z 
-AbjadNumber -> a 
-AbjadNumber -> b 
-AbjadNumber -> c 
-AbjadNumber -> d 
-AbjadNumber -> e 
-AbjadNumber -> f 
-AbjadNumber -> g 
-AbjadNumber -> h 
-AbjadNumber -> i 
-AbjadNumber -> j 
-AbjadNumber -> k 
-AbjadNumber -> l 
-AbjadNumber -> m 
-AbjadNumber -> n 
-AbjadNumber -> o 
-AbjadNumber -> p 
-AbjadNumber -> q 
-AbjadNumber -> r 
-AbjadNumber -> s 
-AbjadNumber -> t 
-AbjadNumber -> u 
-AbjadNumber -> v 
-AbjadNumber -> w 
-AbjadNumber -> x 
-AbjadNumber -> y 
-AbjadNumber -> z 
-AbjadNumber -> True 
-AbjadNumber -> False 
 AbjadUpperCase -> A 
 AbjadUpperCase -> B 
 AbjadUpperCase -> C 
@@ -156,274 +157,291 @@ AbjadUpperCase -> W
 AbjadUpperCase -> X 
 AbjadUpperCase -> Y 
 AbjadUpperCase -> Z 
-Alias -> as 
-Alias -> import 
-AnyType -> True 
-AnyType -> False 
-AsOperator -> as 
-Atom -> e 
+ArithmeticOperator -> + 
+ArithmeticOperator -> - 
+ArithmeticOperator -> * 
+ArithmeticOperator -> / 
+ArithmeticOperator -> % 
+AssignmentOperator -> = 
+Atom -> Abjad 
 Atom -> _ 
-Atom -> A 
-Atom -> B 
-Atom -> C 
-Atom -> D 
-Atom -> E 
-Atom -> F 
-Atom -> G 
-Atom -> H 
-Atom -> I 
-Atom -> J 
-Atom -> K 
-Atom -> L 
-Atom -> M 
-Atom -> N 
-Atom -> O 
-Atom -> P 
-Atom -> Q 
-Atom -> R 
-Atom -> S 
-Atom -> T 
-Atom -> U 
-Atom -> V 
-Atom -> W 
-Atom -> X 
-Atom -> Y 
-Atom -> Z 
-Atom -> a 
-Atom -> b 
-Atom -> c 
-Atom -> d 
-Atom -> f 
-Atom -> g 
-Atom -> h 
-Atom -> i 
-Atom -> j 
-Atom -> k 
-Atom -> l 
-Atom -> m 
-Atom -> n 
-Atom -> o 
-Atom -> p 
-Atom -> q 
-Atom -> r 
-Atom -> s 
-Atom -> t 
-Atom -> u 
-Atom -> v 
-Atom -> w 
-Atom -> x 
-Atom -> y 
-Atom -> z 
-Bin17 -> True 
-Bin17 -> False 
+AtomLoop -> Abjad 
+AtomLoop -> _ 
+BaseClassName -> Abjad 
+BaseClassName -> _ 
+Bin12 -> " 
+Bin12 -> " 
+Bin13 -> ' 
+Bin13 -> ' 
+Bin28 -> ] 
+Bin33 -> ] 
+Bin36 -> ] 
+Bin37 -> , 
+Bin37 -> , 
+Bin41 -> } 
+Bin8 -> , 
+Bin83 -> pass 
+Bin83 -> Abjad 
+Bin83 -> _ 
+Bin88 -> pass 
+Bin88 -> Abjad 
+Bin88 -> _ 
+Bin9 -> ) 
+Bin9 -> ) 
+BitwiseOperator -> & 
 BitwiseOperator -> | 
+BitwiseOperator -> ^ 
 Boolean -> True 
 Boolean -> False 
-BreakContinueOperation -> break 
-BreakContinueOperation -> continue 
-BreakContinueOperator -> break 
-BreakContinueOperator -> continue 
-CodeB -> break 
-CodeB -> continue 
-ConditionalElseOperator -> else 
-ConditionalOperator -> if 
-ConditionalOperator -> elif 
-Dictionary -> e 
-Epsilon -> e 
-Expressions -> e 
-Expressions -> _ 
-Expressions -> A 
-Expressions -> B 
-Expressions -> C 
-Expressions -> D 
-Expressions -> E 
-Expressions -> F 
-Expressions -> G 
-Expressions -> H 
-Expressions -> I 
-Expressions -> J 
-Expressions -> K 
-Expressions -> L 
-Expressions -> M 
-Expressions -> N 
-Expressions -> O 
-Expressions -> P 
-Expressions -> Q 
-Expressions -> R 
-Expressions -> S 
-Expressions -> T 
-Expressions -> U 
-Expressions -> V 
-Expressions -> W 
-Expressions -> X 
-Expressions -> Y 
-Expressions -> Z 
-Expressions -> a 
-Expressions -> b 
-Expressions -> c 
-Expressions -> d 
-Expressions -> f 
-Expressions -> g 
-Expressions -> h 
-Expressions -> i 
-Expressions -> j 
-Expressions -> k 
-Expressions -> l 
-Expressions -> m 
-Expressions -> n 
-Expressions -> o 
-Expressions -> p 
-Expressions -> q 
-Expressions -> r 
-Expressions -> s 
-Expressions -> t 
-Expressions -> u 
-Expressions -> v 
-Expressions -> w 
-Expressions -> x 
-Expressions -> y 
-Expressions -> z 
-Identifier -> e 
+Code -> pass 
+Code -> Abjad 
+Code -> _ 
+ComparisonOperator -> < 
+ComparisonOperator -> > 
+DictKey -> 0 
+DictKey -> 1 
+DictKey -> 2 
+DictKey -> 3 
+DictKey -> 4 
+DictKey -> 5 
+DictKey -> 6 
+DictKey -> 7 
+DictKey -> 8 
+DictKey -> 9 
+DictKey -> True 
+DictKey -> False 
+DictVal -> 0 
+DictVal -> 1 
+DictVal -> 2 
+DictVal -> 3 
+DictVal -> 4 
+DictVal -> 5 
+DictVal -> 6 
+DictVal -> 7 
+DictVal -> 8 
+DictVal -> 9 
+DictVal -> True 
+DictVal -> False 
+Digit -> 0 
+Digit -> 1 
+Digit -> 2 
+Digit -> 3 
+Digit -> 4 
+Digit -> 5 
+Digit -> 6 
+Digit -> 7 
+Digit -> 8 
+Digit -> 9 
+Expression -> Abjad 
+Expression -> _ 
+FromName -> . 
+FromName -> Abjad 
+FromName -> _ 
+Identifier -> Abjad 
 Identifier -> _ 
-Identifier -> A 
-Identifier -> B 
-Identifier -> C 
-Identifier -> D 
-Identifier -> E 
-Identifier -> F 
-Identifier -> G 
-Identifier -> H 
-Identifier -> I 
-Identifier -> J 
-Identifier -> K 
-Identifier -> L 
-Identifier -> M 
-Identifier -> N 
-Identifier -> O 
-Identifier -> P 
-Identifier -> Q 
-Identifier -> R 
-Identifier -> S 
-Identifier -> T 
-Identifier -> U 
-Identifier -> V 
-Identifier -> W 
-Identifier -> X 
-Identifier -> Y 
-Identifier -> Z 
-Identifier -> a 
-Identifier -> b 
-Identifier -> c 
-Identifier -> d 
-Identifier -> f 
-Identifier -> g 
-Identifier -> h 
-Identifier -> i 
-Identifier -> j 
-Identifier -> k 
-Identifier -> l 
-Identifier -> m 
-Identifier -> n 
-Identifier -> o 
-Identifier -> p 
-Identifier -> q 
-Identifier -> r 
-Identifier -> s 
-Identifier -> t 
-Identifier -> u 
-Identifier -> v 
-Identifier -> w 
-Identifier -> x 
-Identifier -> y 
-Identifier -> z 
-ImportOperator -> import 
+IdentifierCharacters -> Abjad 
+IdentifierCharacters -> _ 
+ImportName -> Abjad 
+ImportName -> _ 
 Indentation -> \t 
+Integer -> 0 
+Integer -> 1 
+Integer -> 2 
+Integer -> 3 
+Integer -> 4 
+Integer -> 5 
+Integer -> 6 
+Integer -> 7 
+Integer -> 8 
+Integer -> 9 
 Integer -> True 
 Integer -> False 
-IsOperator -> True 
-IsOperator -> False 
+IterableItemLoop -> Abjad 
+IterableItemLoop -> _ 
 LogicalOperator -> and 
 LogicalOperator -> or 
-LogicalOperator -> not 
+LoopCode -> pass 
+LoopCode -> break 
+LoopCode -> continue 
+LoopCode -> Abjad 
+LoopCode -> _ 
+LoopRunCode -> pass 
+LoopRunCode -> break 
+LoopRunCode -> continue 
+LoopRunCode -> Abjad 
+LoopRunCode -> _ 
+NaturalNumber -> 0 
+NaturalNumber -> 1 
+NaturalNumber -> 2 
+NaturalNumber -> 3 
+NaturalNumber -> 4 
+NaturalNumber -> 5 
+NaturalNumber -> 6 
+NaturalNumber -> 7 
+NaturalNumber -> 8 
+NaturalNumber -> 9 
 NaturalNumber -> True 
 NaturalNumber -> False 
+Newline -> \n 
+NonZeroDigit -> 1 
+NonZeroDigit -> 2 
+NonZeroDigit -> 3 
+NonZeroDigit -> 4 
+NonZeroDigit -> 5 
+NonZeroDigit -> 6 
+NonZeroDigit -> 7 
+NonZeroDigit -> 8 
+NonZeroDigit -> 9 
 NoneType -> None 
+Number -> 0 
+Number -> 1 
+Number -> 2 
+Number -> 3 
+Number -> 4 
+Number -> 5 
+Number -> 6 
+Number -> 7 
+Number -> 8 
+Number -> 9 
 Number -> True 
 Number -> False 
-NumberLoop -> True 
-NumberLoop -> False 
-PassOperator -> pass 
-S0 -> Simple 
-Simple -> True 
-Simple -> False 
-Simple -> None 
-Simple -> a 
-Simple -> b 
-Simple -> c 
-Simple -> d 
-Simple -> e 
-Simple -> f 
-Simple -> g 
-Simple -> h 
-Simple -> i 
-Simple -> j 
-Simple -> k 
-Simple -> l 
-Simple -> m 
-Simple -> n 
-Simple -> o 
-Simple -> p 
-Simple -> q 
-Simple -> r 
-Simple -> s 
-Simple -> t 
-Simple -> u 
-Simple -> v 
-Simple -> w 
-Simple -> x 
-Simple -> y 
-Simple -> z 
-Simple -> A 
-Simple -> B 
-Simple -> C 
-Simple -> D 
-Simple -> E 
-Simple -> F 
-Simple -> G 
-Simple -> H 
-Simple -> I 
-Simple -> J 
-Simple -> K 
-Simple -> L 
-Simple -> M 
-Simple -> N 
-Simple -> O 
-Simple -> P 
-Simple -> Q 
-Simple -> R 
-Simple -> S 
-Simple -> T 
-Simple -> U 
-Simple -> V 
-Simple -> W 
-Simple -> X 
-Simple -> Y 
-Simple -> Z 
-Simple -> _ 
-Simple -> \t 
-SomeType -> True 
-SomeType -> False 
+Parameter -> Abjad 
+Parameter -> _ 
+RunCode -> pass 
+RunCode -> Abjad 
+RunCode -> _ 
+S0 -> pass 
+S0 -> Abjad 
+S0 -> _ 
+SlicerValue -> 0 
+SlicerValue -> 1 
+SlicerValue -> 2 
+SlicerValue -> 3 
+SlicerValue -> 4 
+SlicerValue -> 5 
+SlicerValue -> 6 
+SlicerValue -> 7 
+SlicerValue -> 8 
+SlicerValue -> 9 
+SlicerValue -> True 
+SlicerValue -> False 
+SlicerValue -> Abjad 
+SlicerValue -> _ 
+StringAcceptedCharacters -> Abjad 
+StringAcceptedCharacters -> UnknownChar 
+StringAcceptedCharacters -> + 
+StringAcceptedCharacters -> - 
+StringAcceptedCharacters -> : 
+StringAcceptedCharacters -> * 
+StringAcceptedCharacters -> / 
+StringAcceptedCharacters -> = 
+StringAcceptedCharacters -> > 
+StringAcceptedCharacters -> < 
+StringAcceptedCharacters -> ? 
+StringAcceptedCharacters -> | 
+StringAcceptedCharacters -> & 
+StringAcceptedCharacters -> ^ 
+StringAcceptedCharacters -> % 
+StringAcceptedCharacters -> $ 
+StringAcceptedCharacters -> # 
+StringAcceptedCharacters -> ! 
+StringAcceptedCharacters -> ~ 
+StringAcceptedCharacters -> ` 
+StringAcceptedCharacters -> \\ 
+StringAcceptedCharacters -> @ 
+StringAcceptedCharacters -> _ 
+StringAcceptedCharacters -> { 
+StringAcceptedCharacters -> } 
+StringAcceptedCharacters -> ( 
+StringAcceptedCharacters -> ) 
+StringAcceptedCharacters -> [ 
+StringAcceptedCharacters -> ] 
+StringAcceptedCharacters -> . 
+StringAcceptedCharacters -> " 
+StringAcceptedCharacters -> , 
+StringAcceptedCharacters -> ' 
+StringAcceptedCharacters -> 0 
+StringAcceptedCharacters -> 1 
+StringAcceptedCharacters -> 2 
+StringAcceptedCharacters -> 3 
+StringAcceptedCharacters -> 4 
+StringAcceptedCharacters -> 5 
+StringAcceptedCharacters -> 6 
+StringAcceptedCharacters -> 7 
+StringAcceptedCharacters -> 8 
+StringAcceptedCharacters -> 9 
+StringAcceptedCharacters -> True 
+StringAcceptedCharacters -> False 
+StringLoop -> UnknownChar 
+StringLoop -> + 
+StringLoop -> - 
+StringLoop -> : 
+StringLoop -> * 
+StringLoop -> / 
+StringLoop -> = 
+StringLoop -> > 
+StringLoop -> < 
+StringLoop -> ? 
+StringLoop -> | 
+StringLoop -> & 
+StringLoop -> ^ 
+StringLoop -> % 
+StringLoop -> $ 
+StringLoop -> # 
+StringLoop -> ! 
+StringLoop -> ~ 
+StringLoop -> ` 
+StringLoop -> \\ 
+StringLoop -> @ 
+StringLoop -> _ 
+StringLoop -> { 
+StringLoop -> } 
+StringLoop -> ( 
+StringLoop -> ) 
+StringLoop -> [ 
+StringLoop -> ] 
+StringLoop -> . 
+StringLoop -> " 
+StringLoop -> , 
+StringLoop -> ' 
+StringLoop -> Abjad 
+StringLoop -> 0 
+StringLoop -> 1 
+StringLoop -> 2 
+StringLoop -> 3 
+StringLoop -> 4 
+StringLoop -> 5 
+StringLoop -> 6 
+StringLoop -> 7 
+StringLoop -> 8 
+StringLoop -> 9 
+StringLoop -> True 
+StringLoop -> False 
+Term! -> ! 
+Term" -> " 
+Term" -> " 
+Term% -> % 
+Term& -> & 
+Term' -> ' 
+Term' -> ' 
 Term( -> ( 
 Term) -> ) 
+Term* -> * 
+Term+ -> + 
 Term, -> , 
+Term- -> - 
 Term. -> . 
+Term/ -> / 
+Term/ -> / 
 Term: -> : 
+Term< -> < 
+Term= -> = 
+Term> -> > 
+Term> -> > 
 TermA -> A 
 TermB -> B 
 TermC -> C 
 TermD -> D 
-TermDigit -> Digit 
-TermDigit -> Digit 
 TermE -> E 
 TermF -> F 
 TermG -> G 
@@ -447,23 +465,28 @@ TermX -> X
 TermY -> Y 
 TermZ -> Z 
 Term[ -> [ 
-Term[ -> [ 
 Term\t -> \t 
 Term] -> ] 
+Term] -> ] 
+Term^ -> ^ 
 Terma -> a 
+Termas -> as 
 Termb -> b 
 Termc -> c 
 Termclass -> class 
 Termd -> d 
+Termdef -> def 
 Terme -> e 
+Termelif -> elif 
+Termelse -> else 
 Termf -> f 
 Termfor -> for 
-Termfrom -> from 
 Termfrom -> from 
 Termg -> g 
 Termh -> h 
 Termi -> i 
-Termin -> in 
+Termif -> if 
+Termimport -> import 
 Termin -> in 
 Termis -> is 
 Termj -> j 
@@ -471,6 +494,7 @@ Termk -> k
 Terml -> l 
 Termm -> m 
 Termn -> n 
+Termnot -> not 
 Termo -> o 
 Termp -> p 
 Termq -> q 
@@ -482,14 +506,91 @@ Termt -> t
 Termu -> u 
 Termv -> v 
 Termw -> w 
+Termwhile -> while 
 Termwith -> with 
 Termx -> x 
 Termy -> y 
 Termz -> z 
 Term{ -> { 
+Term| -> | 
 Term} -> } 
-UnderScoreIdentifier -> _ 
-WhileOperator -> while 
+Term~ -> ~ 
+Variable -> Abjad 
+Variable -> _ 
+#IdentifierTail -> IdentifierCharacters #IdentifierTail 
+#IdentifierTail -> NaturalNumber #IdentifierTail 
+#IdentifierTail -> NonZeroDigit #NaturalNumberTail 
+#IdentifierTail -> Atom Bin69 
+#IdentifierTail -> Term( Bin70 
+#IdentifierTail -> Atom Bin71 
+#IdentifierTail -> Termnot Expression 
+#IdentifierTail -> Term( Bin72 
+#IdentifierTail -> Atom Bin77 
+#IdentifierTail -> Term( Bin78 
+#NaturalNumberTail -> Digit #NaturalNumberTail 
+(Identifier) -> Term( Bin11 
+(Identifier) -> IdentifierCharacters #IdentifierTail 
+(Identifier) -> Identifier Bin4 
+(Identifier) -> Identifier Slicer 
+(Identifier) -> Identifier Bin6 
+(Identifier) -> Variable Bin10 
+(Integer) -> Term( Bin1 
+(Integer) -> Term- NaturalNumber 
+(Integer) -> NonZeroDigit #NaturalNumberTail 
+(Integer) -> Atom Bin69 
+(Integer) -> Term( Bin70 
+(Integer) -> Atom Bin71 
+(Integer) -> Termnot Expression 
+(Integer) -> Term( Bin72 
+(Integer) -> Atom Bin77 
+(Integer) -> Term( Bin78 
+(NaturalNumber) -> Term( Bin0 
+(NaturalNumber) -> NonZeroDigit #NaturalNumberTail 
+(NaturalNumber) -> Atom Bin69 
+(NaturalNumber) -> Term( Bin70 
+(NaturalNumber) -> Atom Bin71 
+(NaturalNumber) -> Termnot Expression 
+(NaturalNumber) -> Term( Bin72 
+(NaturalNumber) -> Atom Bin77 
+(NaturalNumber) -> Term( Bin78 
+(Number) -> Term( Bin3 
+(Number) -> Term- NaturalNumber 
+(Number) -> NonZeroDigit #NaturalNumberTail 
+(Number) -> Integer Term. 
+(Number) -> Integer Bin2 
+(Number) -> (Number) Bin43 
+(Number) -> Term( Bin44 
+(Number) -> (Integer) Bin81 
+(Number) -> Term( Bin82 
+(Number) -> (Integer) Bin79 
+(Number) -> Term~ (Integer) 
+(Number) -> Term( Bin80 
+(Number) -> Atom Bin69 
+(Number) -> Term( Bin70 
+(Number) -> Atom Bin71 
+(Number) -> Termnot Expression 
+(Number) -> Term( Bin72 
+(Number) -> Atom Bin77 
+(Number) -> Term( Bin78 
+(String) -> Term( Bin24 
+(String) -> Term" Bin12 
+(String) -> Term' Bin13 
+(String) -> Term' Bin18 
+(String) -> Term" Bin23 
+(String) -> (String) Bin45 
+(String) -> (Identifier) Bin46 
+(String) -> (String) Bin47 
+(String) -> (Identifier) Bin48 
+(String) -> (String) Bin49 
+(String) -> (String) Bin50 
+(String) -> (Identifier) Bin51 
+(String) -> (Identifier) Bin52 
+(String) -> Term( Bin53 
+(Variable) -> Term( Bin7 
+(Variable) -> IdentifierCharacters #IdentifierTail 
+(Variable) -> Identifier Bin4 
+(Variable) -> Identifier Slicer 
+(Variable) -> Identifier Bin6 
 Abjad -> TermA Abjad 
 Abjad -> TermB Abjad 
 Abjad -> TermC Abjad 
@@ -568,76 +669,6 @@ AbjadLowerCase -> Termw Abjad
 AbjadLowerCase -> Termx Abjad 
 AbjadLowerCase -> Termy Abjad 
 AbjadLowerCase -> Termz Abjad 
-AbjadNumber -> AbjadNumber Number 
-AbjadNumber -> AbjadNumber Abjad 
-AbjadNumber -> TermA Abjad 
-AbjadNumber -> TermB Abjad 
-AbjadNumber -> TermC Abjad 
-AbjadNumber -> TermD Abjad 
-AbjadNumber -> TermE Abjad 
-AbjadNumber -> TermF Abjad 
-AbjadNumber -> TermG Abjad 
-AbjadNumber -> TermH Abjad 
-AbjadNumber -> TermI Abjad 
-AbjadNumber -> TermJ Abjad 
-AbjadNumber -> TermK Abjad 
-AbjadNumber -> TermL Abjad 
-AbjadNumber -> TermM Abjad 
-AbjadNumber -> TermN Abjad 
-AbjadNumber -> TermO Abjad 
-AbjadNumber -> TermP Abjad 
-AbjadNumber -> TermQ Abjad 
-AbjadNumber -> TermR Abjad 
-AbjadNumber -> TermS Abjad 
-AbjadNumber -> TermT Abjad 
-AbjadNumber -> TermU Abjad 
-AbjadNumber -> TermV Abjad 
-AbjadNumber -> TermW Abjad 
-AbjadNumber -> TermX Abjad 
-AbjadNumber -> TermY Abjad 
-AbjadNumber -> TermZ Abjad 
-AbjadNumber -> Terma Abjad 
-AbjadNumber -> Termb Abjad 
-AbjadNumber -> Termc Abjad 
-AbjadNumber -> Termd Abjad 
-AbjadNumber -> Terme Abjad 
-AbjadNumber -> Termf Abjad 
-AbjadNumber -> Termg Abjad 
-AbjadNumber -> Termh Abjad 
-AbjadNumber -> Termi Abjad 
-AbjadNumber -> Termj Abjad 
-AbjadNumber -> Termk Abjad 
-AbjadNumber -> Terml Abjad 
-AbjadNumber -> Termm Abjad 
-AbjadNumber -> Termn Abjad 
-AbjadNumber -> Termo Abjad 
-AbjadNumber -> Termp Abjad 
-AbjadNumber -> Termq Abjad 
-AbjadNumber -> Termr Abjad 
-AbjadNumber -> Terms Abjad 
-AbjadNumber -> Termt Abjad 
-AbjadNumber -> Termu Abjad 
-AbjadNumber -> Termv Abjad 
-AbjadNumber -> Termw Abjad 
-AbjadNumber -> Termx Abjad 
-AbjadNumber -> Termy Abjad 
-AbjadNumber -> Termz Abjad 
-AbjadNumber -> Decimal Bin1 
-AbjadNumber -> Digit NaturalNumber 
-AbjadNumber -> 1 TermDigit 
-AbjadNumber -> 2 TermDigit 
-AbjadNumber -> 3 TermDigit 
-AbjadNumber -> 4 TermDigit 
-AbjadNumber -> 5 TermDigit 
-AbjadNumber -> 6 TermDigit 
-AbjadNumber -> 7 TermDigit 
-AbjadNumber -> 8 TermDigit 
-AbjadNumber -> 9 TermDigit 
-AbjadNumber -> Integer Term. 
-AbjadNumber -> Integer Bin0 
-AbjadNumber -> Number Bin17 
-AbjadNumber -> Atom Bin19 
-AbjadNumber -> Atom Bin20 
 AbjadUpperCase -> TermA Abjad 
 AbjadUpperCase -> TermB Abjad 
 AbjadUpperCase -> TermC Abjad 
@@ -664,649 +695,1073 @@ AbjadUpperCase -> TermW Abjad
 AbjadUpperCase -> TermX Abjad 
 AbjadUpperCase -> TermY Abjad 
 AbjadUpperCase -> TermZ Abjad 
-Alias -> ImportOperator Bin51 
-Alias -> ImportOperator Indentifier 
-AliasOperation -> ImportOperator Bin51 
-AliasOperation -> ImportOperator Indentifier 
-AnyType -> Term[ Bin9 
-AnyType -> Term[ Bin10 
-AnyType -> Term[ Bin11 
-AnyType -> Term[ Bin12 
-AnyType -> Term( Bin13 
-AnyType -> Term( Bin14 
-AnyType -> Decimal Bin1 
-AnyType -> Digit NaturalNumber 
-AnyType -> 1 TermDigit 
-AnyType -> 2 TermDigit 
-AnyType -> 3 TermDigit 
-AnyType -> 4 TermDigit 
-AnyType -> 5 TermDigit 
-AnyType -> 6 TermDigit 
-AnyType -> 7 TermDigit 
-AnyType -> 8 TermDigit 
-AnyType -> 9 TermDigit 
-AnyType -> Integer Term. 
-AnyType -> Integer Bin0 
-AnyType -> Number Bin17 
-AnyType -> Atom Bin19 
-AnyType -> Atom Bin20 
-ArithmeticOperation -> Number Bin17 
-AssignmentOperation -> Idenifier Bin18 
-Atom -> UnderScoreIdentifier AbjadNumber 
-Atom -> AbjadNumber UnderScoreIdentifier 
-Atom -> AbjadNumber Bin2 
-Atom -> TermA Abjad 
-Atom -> TermB Abjad 
-Atom -> TermC Abjad 
-Atom -> TermD Abjad 
-Atom -> TermE Abjad 
-Atom -> TermF Abjad 
-Atom -> TermG Abjad 
-Atom -> TermH Abjad 
-Atom -> TermI Abjad 
-Atom -> TermJ Abjad 
-Atom -> TermK Abjad 
-Atom -> TermL Abjad 
-Atom -> TermM Abjad 
-Atom -> TermN Abjad 
-Atom -> TermO Abjad 
-Atom -> TermP Abjad 
-Atom -> TermQ Abjad 
-Atom -> TermR Abjad 
-Atom -> TermS Abjad 
-Atom -> TermT Abjad 
-Atom -> TermU Abjad 
-Atom -> TermV Abjad 
-Atom -> TermW Abjad 
-Atom -> TermX Abjad 
-Atom -> TermY Abjad 
-Atom -> TermZ Abjad 
-Atom -> Terma Abjad 
-Atom -> Termb Abjad 
-Atom -> Termc Abjad 
-Atom -> Termd Abjad 
-Atom -> Terme Abjad 
-Atom -> Termf Abjad 
-Atom -> Termg Abjad 
-Atom -> Termh Abjad 
-Atom -> Termi Abjad 
-Atom -> Termj Abjad 
-Atom -> Termk Abjad 
-Atom -> Terml Abjad 
-Atom -> Termm Abjad 
-Atom -> Termn Abjad 
-Atom -> Termo Abjad 
-Atom -> Termp Abjad 
-Atom -> Termq Abjad 
-Atom -> Termr Abjad 
-Atom -> Terms Abjad 
-Atom -> Termt Abjad 
-Atom -> Termu Abjad 
-Atom -> Termv Abjad 
-Atom -> Termw Abjad 
-Atom -> Termx Abjad 
-Atom -> Termy Abjad 
-Atom -> Termz Abjad 
-Bin0 -> Term. NaturalNumber 
-Bin1 -> E Integer 
-Bin10 -> NumberLoop Term] 
-Bin100 -> Termreturn Identifier 
-Bin101 -> Indentation Code 
-Bin102 -> Term: Bin101 
-Bin103 -> Identifier Bin102 
-Bin104 -> AsOperator Bin103 
+ArithmeticOperation -> (Number) Bin43 
+ArithmeticOperation -> Term( Bin44 
+ArithmeticOperator -> Term* Term* 
+ArithmeticOperator -> Term/ Term/ 
+AssignmentOperation -> (Identifier) Bin68 
+AssignmentOperation -> (Identifier) Bin58 
+AssignmentOperation -> (Identifier) Bin59 
+AssignmentOperation -> (Identifier) Bin61 
+AssignmentOperation -> (Identifier) Bin63 
+AssignmentOperation -> (Identifier) Bin65 
+AssignmentOperation -> (Identifier) Bin67 
+Atom -> Term( Bin42 
+Atom -> IdentifierCharacters #IdentifierTail 
+Atom -> Identifier Bin4 
+Atom -> Identifier Slicer 
+Atom -> Identifier Bin6 
+Atom -> Variable Bin10 
+Atom -> Iterable Slicer 
+Atom -> Term" Bin12 
+Atom -> Term' Bin13 
+Atom -> Term' Bin18 
+Atom -> Term" Bin23 
+Atom -> (String) Bin45 
+Atom -> (Identifier) Bin46 
+Atom -> (String) Bin47 
+Atom -> (Identifier) Bin48 
+Atom -> (String) Bin49 
+Atom -> (String) Bin50 
+Atom -> (Identifier) Bin51 
+Atom -> (Identifier) Bin52 
+Atom -> Term( Bin53 
+Atom -> Term[ Bin26 
+Atom -> Term( Bin27 
+Atom -> Term{ Bin41 
+AtomLoop -> Atom Bin8 
+AtomLoop -> Term( Bin42 
+AtomLoop -> IdentifierCharacters #IdentifierTail 
+AtomLoop -> Identifier Bin4 
+AtomLoop -> Identifier Slicer 
+AtomLoop -> Identifier Bin6 
+AtomLoop -> Variable Bin10 
+AtomLoop -> Iterable Slicer 
+AtomLoop -> Term" Bin12 
+AtomLoop -> Term' Bin13 
+AtomLoop -> Term' Bin18 
+AtomLoop -> Term" Bin23 
+AtomLoop -> (String) Bin45 
+AtomLoop -> (Identifier) Bin46 
+AtomLoop -> (String) Bin47 
+AtomLoop -> (Identifier) Bin48 
+AtomLoop -> (String) Bin49 
+AtomLoop -> (String) Bin50 
+AtomLoop -> (Identifier) Bin51 
+AtomLoop -> (Identifier) Bin52 
+AtomLoop -> Term( Bin53 
+AtomLoop -> Term[ Bin26 
+AtomLoop -> Term( Bin27 
+AtomLoop -> Term{ Bin41 
+BaseClassName -> ImportName Bin120 
+BaseClassName -> IdentifierCharacters #IdentifierTail 
+Bin0 -> NaturalNumber Term) 
+Bin1 -> Integer Term) 
+Bin10 -> Term( Bin9 
+Bin100 -> Termin Bin99 
+Bin101 -> Variable Bin100 
+Bin102 -> Indentation LoopRunCode 
+Bin103 -> Newline Bin102 
+Bin104 -> Term: Bin103 
 Bin105 -> Identifier Bin104 
-Bin11 -> List Term] 
-Bin12 -> Tuple Term] 
-Bin13 -> StringLoop Term) 
-Bin14 -> NumberLoop Term) 
-Bin15 -> Dictionary Term} 
-Bin16 -> StringLoop Term} 
-Bin17 -> Decimal Bin1 
-Bin17 -> Digit NaturalNumber 
-Bin17 -> 1 TermDigit 
-Bin17 -> 2 TermDigit 
-Bin17 -> 3 TermDigit 
-Bin17 -> 4 TermDigit 
-Bin17 -> 5 TermDigit 
-Bin17 -> 6 TermDigit 
-Bin17 -> 7 TermDigit 
-Bin17 -> 8 TermDigit 
-Bin17 -> 9 TermDigit 
-Bin17 -> Integer Term. 
-Bin17 -> Integer Bin0 
-Bin17 -> Number Bin17 
-Bin17 -> Atom Bin19 
-Bin17 -> Atom Bin20 
-Bin18 -> AssignmentOperator Literal 
-Bin19 -> ComparisonOperator Atom 
-Bin2 -> UnderScoreIdentifier AbjadNumber 
-Bin20 -> LogicalOperator Atom 
-Bin21 -> is Atom 
-Bin22 -> BitwiseOperator Integer 
-Bin23 -> BitshiftOperator NaturalNumber 
-Bin24 -> Indentation Code 
-Bin25 -> Term: Bin24 
-Bin26 -> Expression Bin25 
-Bin27 -> Indentation Code 
-Bin28 -> Term: Bin27 
-Bin29 -> Term) Bin28 
-Bin3 -> Term, String 
-Bin30 -> Expression Bin29 
-Bin31 -> Term( Bin30 
-Bin32 -> Indentation Code 
-Bin33 -> Term: Bin32 
-Bin34 -> Indentation Code 
-Bin35 -> Term: Bin34 
-Bin36 -> Expression Bin35 
-Bin37 -> Indentation Code 
-Bin38 -> Term: Bin37 
-Bin39 -> Term) Bin38 
-Bin4 -> Term, Number 
-Bin40 -> Expression Bin39 
-Bin41 -> Term( Bin40 
-Bin42 -> Indentation BreakContinueOperation 
-Bin43 -> Term: Bin42 
-Bin44 -> Expression Bin43 
-Bin45 -> Indentation BreakContinueOperation 
-Bin46 -> Term: Bin45 
-Bin47 -> Term) Bin46 
-Bin48 -> Expression Bin47 
-Bin49 -> Term( Bin48 
-Bin5 -> Term: AnyType 
-Bin50 -> AsOperator Identifier 
-Bin51 -> Indentifier Bin50 
-Bin52 -> Indentation Code 
-Bin53 -> Term: Bin52 
-Bin54 -> Indentifier Bin53 
-Bin55 -> Termin List 
-Bin56 -> Termin List 
-Bin57 -> Termin String 
-Bin58 -> Termin Tuple 
-Bin59 -> Termin Tuple 
-Bin6 -> SomeType Bin5 
-Bin60 -> Termin Identifier 
-Bin61 -> Indentation Code 
-Bin62 -> Term: Bin61 
-Bin63 -> InOperation Bin62 
-Bin64 -> Indentation CodeB 
-Bin65 -> Term: Bin64 
-Bin66 -> InOperation Bin65 
-Bin67 -> Identifier AliasOperation 
-Bin68 -> Termis IsOperator 
-Bin69 -> String Term) 
-Bin7 -> Term, Bin6 
-Bin70 -> Term( Bin69 
-Bin71 -> Identifier Bin70 
-Bin72 -> Termraise Bin71 
-Bin73 -> Termreturn Identifier 
-Bin74 -> Indentation Code 
-Bin75 -> Term: Bin74 
-Bin76 -> Identifier Bin75 
-Bin77 -> AsOperator Bin76 
-Bin78 -> Identifier Bin77 
-Bin79 -> Indentation Code 
-Bin8 -> Term: AnyType 
-Bin80 -> Term: Bin79 
-Bin81 -> Indentifier Bin80 
-Bin82 -> Termin List 
-Bin83 -> Termin List 
-Bin84 -> Termin String 
-Bin85 -> Termin Tuple 
-Bin86 -> Termin Tuple 
-Bin87 -> Termin Identifier 
-Bin88 -> Indentation Code 
-Bin89 -> Term: Bin88 
-Bin9 -> StringLoop Term] 
-Bin90 -> InOperation Bin89 
-Bin91 -> Indentation CodeB 
-Bin92 -> Term: Bin91 
-Bin93 -> InOperation Bin92 
-Bin94 -> Identifier AliasOperation 
-Bin95 -> Termis IsOperator 
-Bin96 -> String Term) 
-Bin97 -> Term( Bin96 
-Bin98 -> Identifier Bin97 
-Bin99 -> Termraise Bin98 
-BinaryOperation -> Integer Bin22 
-BinaryOperation -> Integer Bin23 
-BitshiftOperation -> Integer Bin23 
-BitwiseOperation -> Integer Bin22 
-Boolean -> Atom Bin19 
-Boolean -> Atom Bin20 
-Bracket -> Term[ Bin9 
-Bracket -> Term[ Bin10 
-Bracket -> Term[ Bin11 
-Bracket -> Term[ Bin12 
-Bracket -> Term( Bin13 
-Bracket -> Term( Bin14 
-Bracket -> Term{ Bin15 
-Bracket -> Term{ Bin16 
-ClassOperation -> Termclass Bin54 
-ClassOperation -> Termclass Bin81 
-Code -> Indentation Pass 
-Code -> Termclass Bin54 
-Code -> Termclass Bin81 
-Code -> Identifier Bin55 
-Code -> Number Bin56 
-Code -> Identifier Bin57 
-Code -> Identifier Bin58 
-Code -> Number Bin59 
-Code -> Identifier Bin60 
-Code -> Identifier Bin82 
-Code -> Number Bin83 
-Code -> Identifier Bin84 
-Code -> Identifier Bin85 
-Code -> Number Bin86 
-Code -> Identifier Bin87 
-Code -> Termfor Bin63 
-Code -> Termfor Bin66 
-Code -> Termfor Bin90 
-Code -> Termfor Bin93 
-Code -> Termfrom Bin67 
-Code -> Termfrom Bin94 
-Code -> IsOperator Bin68 
-Code -> IsOperator Bin95 
-Code -> Indentation Bin72 
-Code -> Indentation Bin99 
-Code -> Indentation Bin73 
-Code -> Indentation Bin100 
-Code -> Termwith Bin78 
-Code -> Termwith Bin105 
-CodeB -> Indentation Pass 
-CodeB -> Termclass Bin54 
-CodeB -> Termclass Bin81 
-CodeB -> Identifier Bin55 
-CodeB -> Number Bin56 
-CodeB -> Identifier Bin57 
-CodeB -> Identifier Bin58 
-CodeB -> Number Bin59 
-CodeB -> Identifier Bin60 
-CodeB -> Identifier Bin82 
-CodeB -> Number Bin83 
-CodeB -> Identifier Bin84 
-CodeB -> Identifier Bin85 
-CodeB -> Number Bin86 
-CodeB -> Identifier Bin87 
-CodeB -> Termfor Bin63 
-CodeB -> Termfor Bin66 
-CodeB -> Termfor Bin90 
-CodeB -> Termfor Bin93 
-CodeB -> Termfrom Bin67 
-CodeB -> Termfrom Bin94 
-CodeB -> IsOperator Bin68 
-CodeB -> IsOperator Bin95 
-CodeB -> Indentation Bin72 
-CodeB -> Indentation Bin99 
-CodeB -> Indentation Bin73 
-CodeB -> Indentation Bin100 
-CodeB -> Termwith Bin78 
-CodeB -> Termwith Bin105 
-ComparisonOperation -> Atom Bin19 
-Conditional -> ConditionalOperator Bin26 
-Conditional -> ConditionalOperator Bin31 
-Conditional -> ConditionalOperator Bin33 
-Conditional -> WhileOperator Bin36 
-Conditional -> WhileOperator Bin41 
-Conditional -> WhileOperator Bin44 
-Conditional -> WhileOperator Bin49 
-ConditionalElseOperation -> ConditionalOperator Bin33 
-ConditionalOperation -> ConditionalOperator Bin26 
-ConditionalOperation -> ConditionalOperator Bin31 
-Curly -> Term{ Bin15 
-Curly -> Term{ Bin16 
+Bin106 -> Termin Bin105 
+Bin107 -> Variable Bin106 
+Bin108 -> Indentation LoopRunCode 
+Bin109 -> Newline Bin108 
+Bin11 -> Identifier Term) 
+Bin110 -> Term: Bin109 
+Bin111 -> Atom Bin110 
+Bin112 -> Termimport ImportName 
+Bin113 -> FromName Bin112 
+Bin114 -> Termas ImportName 
+Bin115 -> ImportName Bin114 
+Bin116 -> Termas ImportName 
+Bin117 -> ImportName Bin116 
+Bin118 -> Termimport Bin117 
+Bin119 -> FromName Bin118 
+Bin12 -> StringLoop Term" 
+Bin120 -> Term. BaseClassName 
+Bin121 -> Indentation Code 
+Bin122 -> Newline Bin121 
+Bin123 -> Term: Bin122 
+Bin124 -> ImportName Bin123 
+Bin125 -> Indentation Code 
+Bin126 -> Newline Bin125 
+Bin127 -> Term: Bin126 
+Bin128 -> Term) Bin127 
+Bin129 -> BaseClassName Bin128 
+Bin13 -> StringLoop Term' 
+Bin130 -> Term( Bin129 
+Bin131 -> ImportName Bin130 
+Bin132 -> Indentation Code 
+Bin133 -> Newline Bin132 
+Bin134 -> Term: Bin133 
+Bin135 -> Term) Bin134 
+Bin136 -> Parameter Bin135 
+Bin136 -> Term) Bin134 
+Bin137 -> Term( Bin136 
+Bin138 -> ImportName Bin137 
+Bin139 -> Indentation Termreturn 
+Bin14 -> Term' Term' 
+Bin140 -> Code Bin139 
+Bin141 -> Indentation Bin140 
+Bin142 -> Newline Bin141 
+Bin143 -> Term: Bin142 
+Bin144 -> Term) Bin143 
+Bin145 -> Parameter Bin144 
+Bin145 -> Term) Bin143 
+Bin146 -> Term( Bin145 
+Bin147 -> ImportName Bin146 
+Bin148 -> (String) Term) 
+Bin149 -> Term( Bin148 
+Bin15 -> Term' Bin14 
+Bin150 -> ImportName Bin149 
+Bin151 -> Indentation Code 
+Bin152 -> Newline Bin151 
+Bin153 -> Term: Bin152 
+Bin154 -> ImportName Bin153 
+Bin155 -> Termas Bin154 
+Bin156 -> Identifier Bin155 
+Bin16 -> StringWithEnterLoop Bin15 
+Bin17 -> Term' Bin16 
+Bin18 -> Term' Bin17 
+Bin19 -> Term" Term" 
+Bin2 -> Term. #NaturalNumberTail 
+Bin20 -> Term" Bin19 
+Bin21 -> StringWithEnterLoop Bin20 
+Bin22 -> Term" Bin21 
+Bin23 -> Term" Bin22 
+Bin24 -> String Term) 
+Bin25 -> Term, IterableItemLoop 
+Bin26 -> IterableItemLoop Term] 
+Bin27 -> IterableItemLoop Term) 
+Bin28 -> SlicerValue Term] 
+Bin29 -> Term: Bin28 
+Bin3 -> Number Term) 
+Bin30 -> SlicerValue Bin29 
+Bin30 -> Term: Bin28 
+Bin31 -> Term: Bin30 
+Bin32 -> SlicerValue Bin31 
+Bin32 -> Term: Bin30 
+Bin33 -> SlicerValue Term] 
+Bin34 -> Term: Bin33 
+Bin35 -> SlicerValue Bin34 
+Bin35 -> Term: Bin33 
+Bin36 -> SlicerValue Term] 
+Bin37 -> Term, DictionaryLoop 
+Bin38 -> DictVal Bin37 
+Bin39 -> Term: Bin38 
+Bin4 -> Term. Variable 
+Bin40 -> Term: DictVal 
+Bin41 -> DictionaryLoop Term} 
+Bin42 -> Atom Term) 
+Bin43 -> ArithmeticOperator (Number) 
+Bin44 -> ArithmeticOperation Term) 
+Bin45 -> Term+ (String) 
+Bin46 -> Term+ (String) 
+Bin47 -> Term+ (Identifier) 
+Bin48 -> Term+ (Identifier) 
+Bin49 -> Term* (NaturalNumber) 
+Bin5 -> Atom Term] 
+Bin50 -> Term* (Identifier) 
+Bin51 -> Term* (NaturalNumber) 
+Bin52 -> Term* (Identifier) 
+Bin53 -> StringOperation Term) 
+Bin54 -> Term* Term= 
+Bin55 -> Term/ Term= 
+Bin56 -> Term> Term= 
+Bin57 -> Term< Term= 
+Bin58 -> NumericAssignmentOperator (Number) 
+Bin59 -> NumericAssignmentOperator (Identifier) 
+Bin6 -> Term[ Bin5 
+Bin60 -> Term= (String) 
+Bin61 -> Term+ Bin60 
+Bin62 -> Term= (Identifier) 
+Bin63 -> Term+ Bin62 
+Bin64 -> Term= (NaturalNumber) 
+Bin65 -> Term* Bin64 
+Bin66 -> Term= (Identifier) 
+Bin67 -> Term* Bin66 
+Bin68 -> AssignmentOperator Atom 
+Bin69 -> ComparisonOperator Atom 
+Bin7 -> Variable Term) 
+Bin70 -> ComparisonOperation Term) 
+Bin71 -> LogicalOperator Atom 
+Bin72 -> LogicalOperation Term) 
+Bin73 -> Termis Atom 
+Bin74 -> Termnot Atom 
+Bin75 -> Termis Bin74 
+Bin76 -> IdentityOperation Term) 
+Bin77 -> in (Variable) 
+Bin78 -> MembershipOperation Term) 
+Bin79 -> BitwiseOperator (Integer) 
+Bin8 -> Term, AtomLoop 
+Bin80 -> BitwiseOperation Term) 
+Bin81 -> BitshiftOperator (NaturalNumber) 
+Bin82 -> BitshiftOperation Term) 
+Bin83 -> Code ConditionalElif 
+Bin83 -> Termif Bin87 
+Bin83 -> Termfor Bin101 
+Bin83 -> Termfor Bin107 
+Bin83 -> Termwhile Bin111 
+Bin83 -> Termimport ImportName 
+Bin83 -> Termfrom Bin113 
+Bin83 -> Termimport Bin115 
+Bin83 -> Termfrom Bin119 
+Bin83 -> Termclass Bin124 
+Bin83 -> Termclass Bin131 
+Bin83 -> Termdef Bin138 
+Bin83 -> Termdef Bin147 
+Bin83 -> Termraise ImportName 
+Bin83 -> Termraise Bin150 
+Bin83 -> Termwith Bin156 
+Bin83 -> (Number) Bin43 
+Bin83 -> Term( Bin44 
+Bin83 -> (String) Bin45 
+Bin83 -> (Identifier) Bin46 
+Bin83 -> (String) Bin47 
+Bin83 -> (Identifier) Bin48 
+Bin83 -> (String) Bin49 
+Bin83 -> (String) Bin50 
+Bin83 -> (Identifier) Bin51 
+Bin83 -> (Identifier) Bin52 
+Bin83 -> Term( Bin53 
+Bin83 -> (Identifier) Bin68 
+Bin83 -> (Identifier) Bin58 
+Bin83 -> (Identifier) Bin59 
+Bin83 -> (Identifier) Bin61 
+Bin83 -> (Identifier) Bin63 
+Bin83 -> (Identifier) Bin65 
+Bin83 -> (Identifier) Bin67 
+Bin83 -> Atom Bin69 
+Bin83 -> Term( Bin70 
+Bin83 -> Atom Bin71 
+Bin83 -> Termnot Expression 
+Bin83 -> Term( Bin72 
+Bin83 -> Atom Bin73 
+Bin83 -> Atom Bin75 
+Bin83 -> Term( Bin76 
+Bin83 -> Atom Bin77 
+Bin83 -> Term( Bin78 
+Bin83 -> (Integer) Bin79 
+Bin83 -> Term~ (Integer) 
+Bin83 -> Term( Bin80 
+Bin83 -> (Integer) Bin81 
+Bin83 -> Term( Bin82 
+Bin83 -> Term( Bin42 
+Bin83 -> IdentifierCharacters #IdentifierTail 
+Bin83 -> Identifier Bin4 
+Bin83 -> Identifier Slicer 
+Bin83 -> Identifier Bin6 
+Bin83 -> Variable Bin10 
+Bin83 -> Iterable Slicer 
+Bin83 -> Term" Bin12 
+Bin83 -> Term' Bin13 
+Bin83 -> Term' Bin18 
+Bin83 -> Term" Bin23 
+Bin83 -> Term[ Bin26 
+Bin83 -> Term( Bin27 
+Bin83 -> Term{ Bin41 
+Bin84 -> Indentation Bin83 
+Bin85 -> Newline Bin84 
+Bin86 -> Term: Bin85 
+Bin87 -> Atom Bin86 
+Bin88 -> Code ConditionalElif 
+Bin88 -> Termif Bin87 
+Bin88 -> Termfor Bin101 
+Bin88 -> Termfor Bin107 
+Bin88 -> Termwhile Bin111 
+Bin88 -> Termimport ImportName 
+Bin88 -> Termfrom Bin113 
+Bin88 -> Termimport Bin115 
+Bin88 -> Termfrom Bin119 
+Bin88 -> Termclass Bin124 
+Bin88 -> Termclass Bin131 
+Bin88 -> Termdef Bin138 
+Bin88 -> Termdef Bin147 
+Bin88 -> Termraise ImportName 
+Bin88 -> Termraise Bin150 
+Bin88 -> Termwith Bin156 
+Bin88 -> (Number) Bin43 
+Bin88 -> Term( Bin44 
+Bin88 -> (String) Bin45 
+Bin88 -> (Identifier) Bin46 
+Bin88 -> (String) Bin47 
+Bin88 -> (Identifier) Bin48 
+Bin88 -> (String) Bin49 
+Bin88 -> (String) Bin50 
+Bin88 -> (Identifier) Bin51 
+Bin88 -> (Identifier) Bin52 
+Bin88 -> Term( Bin53 
+Bin88 -> (Identifier) Bin68 
+Bin88 -> (Identifier) Bin58 
+Bin88 -> (Identifier) Bin59 
+Bin88 -> (Identifier) Bin61 
+Bin88 -> (Identifier) Bin63 
+Bin88 -> (Identifier) Bin65 
+Bin88 -> (Identifier) Bin67 
+Bin88 -> Atom Bin69 
+Bin88 -> Term( Bin70 
+Bin88 -> Atom Bin71 
+Bin88 -> Termnot Expression 
+Bin88 -> Term( Bin72 
+Bin88 -> Atom Bin73 
+Bin88 -> Atom Bin75 
+Bin88 -> Term( Bin76 
+Bin88 -> Atom Bin77 
+Bin88 -> Term( Bin78 
+Bin88 -> (Integer) Bin79 
+Bin88 -> Term~ (Integer) 
+Bin88 -> Term( Bin80 
+Bin88 -> (Integer) Bin81 
+Bin88 -> Term( Bin82 
+Bin88 -> Term( Bin42 
+Bin88 -> IdentifierCharacters #IdentifierTail 
+Bin88 -> Identifier Bin4 
+Bin88 -> Identifier Slicer 
+Bin88 -> Identifier Bin6 
+Bin88 -> Variable Bin10 
+Bin88 -> Iterable Slicer 
+Bin88 -> Term" Bin12 
+Bin88 -> Term' Bin13 
+Bin88 -> Term' Bin18 
+Bin88 -> Term" Bin23 
+Bin88 -> Term[ Bin26 
+Bin88 -> Term( Bin27 
+Bin88 -> Term{ Bin41 
+Bin89 -> Indentation Bin88 
+Bin9 -> AtomLoop Term) 
+Bin90 -> Newline Bin89 
+Bin91 -> Term: Bin90 
+Bin92 -> Atom Bin91 
+Bin93 -> Indentation Code 
+Bin94 -> Newline Bin93 
+Bin95 -> Term: Bin94 
+Bin96 -> Indentation LoopRunCode 
+Bin97 -> Newline Bin96 
+Bin98 -> Term: Bin97 
+Bin99 -> Iterable Bin98 
+BinaryOperation -> (Integer) Bin79 
+BinaryOperation -> Term~ (Integer) 
+BinaryOperation -> Term( Bin80 
+BinaryOperation -> (Integer) Bin81 
+BinaryOperation -> Term( Bin82 
+BitshiftOperation -> (Integer) Bin81 
+BitshiftOperation -> Term( Bin82 
+BitshiftOperator -> Term< Term< 
+BitshiftOperator -> Term> Term> 
+BitwiseOperation -> (Integer) Bin79 
+BitwiseOperation -> Term~ (Integer) 
+BitwiseOperation -> Term( Bin80 
+Boolean -> Atom Bin69 
+Boolean -> Term( Bin70 
+Boolean -> Atom Bin71 
+Boolean -> Termnot Expression 
+Boolean -> Term( Bin72 
+Boolean -> Atom Bin77 
+Boolean -> Term( Bin78 
+Bracket -> Term[ Bin26 
+Bracket -> Term( Bin27 
+Class -> Termclass Bin124 
+Class -> Termclass Bin131 
+Code -> Termif Bin87 
+Code -> Termfor Bin101 
+Code -> Termfor Bin107 
+Code -> Termwhile Bin111 
+Code -> Termimport ImportName 
+Code -> Termfrom Bin113 
+Code -> Termimport Bin115 
+Code -> Termfrom Bin119 
+Code -> Termclass Bin124 
+Code -> Termclass Bin131 
+Code -> Termdef Bin138 
+Code -> Termdef Bin147 
+Code -> Termraise ImportName 
+Code -> Termraise Bin150 
+Code -> Termwith Bin156 
+Code -> (Number) Bin43 
+Code -> Term( Bin44 
+Code -> (String) Bin45 
+Code -> (Identifier) Bin46 
+Code -> (String) Bin47 
+Code -> (Identifier) Bin48 
+Code -> (String) Bin49 
+Code -> (String) Bin50 
+Code -> (Identifier) Bin51 
+Code -> (Identifier) Bin52 
+Code -> Term( Bin53 
+Code -> (Identifier) Bin68 
+Code -> (Identifier) Bin58 
+Code -> (Identifier) Bin59 
+Code -> (Identifier) Bin61 
+Code -> (Identifier) Bin63 
+Code -> (Identifier) Bin65 
+Code -> (Identifier) Bin67 
+Code -> Atom Bin69 
+Code -> Term( Bin70 
+Code -> Atom Bin71 
+Code -> Termnot Expression 
+Code -> Term( Bin72 
+Code -> Atom Bin73 
+Code -> Atom Bin75 
+Code -> Term( Bin76 
+Code -> Atom Bin77 
+Code -> Term( Bin78 
+Code -> (Integer) Bin79 
+Code -> Term~ (Integer) 
+Code -> Term( Bin80 
+Code -> (Integer) Bin81 
+Code -> Term( Bin82 
+Code -> Term( Bin42 
+Code -> IdentifierCharacters #IdentifierTail 
+Code -> Identifier Bin4 
+Code -> Identifier Slicer 
+Code -> Identifier Bin6 
+Code -> Variable Bin10 
+Code -> Iterable Slicer 
+Code -> Term" Bin12 
+Code -> Term' Bin13 
+Code -> Term' Bin18 
+Code -> Term" Bin23 
+Code -> Term[ Bin26 
+Code -> Term( Bin27 
+Code -> Term{ Bin41 
+ComparisonOperation -> Atom Bin69 
+ComparisonOperation -> Term( Bin70 
+ComparisonOperator -> Term= Term= 
+ComparisonOperator -> Term! Term= 
+ComparisonOperator -> Term< Term= 
+ComparisonOperator -> Term= Term> 
+ConditionalElif -> Termelif Bin92 
+ConditionalElif -> Termelse Bin95 
+ConditionalIf -> Termif Bin87 
 Decimal -> Integer Term. 
-Decimal -> Integer Bin0 
-Dictionary -> Dictionary Bin7 
-Dictionary -> SomeType Bin8 
-Digit -> 1 TermDigit 
-Digit -> 2 TermDigit 
-Digit -> 3 TermDigit 
-Digit -> 4 TermDigit 
-Digit -> 5 TermDigit 
-Digit -> 6 TermDigit 
-Digit -> 7 TermDigit 
-Digit -> 8 TermDigit 
-Digit -> 9 TermDigit 
-Expressions -> Number Bin17 
-Expressions -> Idenifier Bin18 
-Expressions -> Atom Bin19 
-Expressions -> Atom Bin20 
-Expressions -> Atom Bin21 
-Expressions -> Integer Bin22 
-Expressions -> Integer Bin23 
-Expressions -> UnderScoreIdentifier AbjadNumber 
-Expressions -> AbjadNumber UnderScoreIdentifier 
-Expressions -> AbjadNumber Bin2 
-Expressions -> TermA Abjad 
-Expressions -> TermB Abjad 
-Expressions -> TermC Abjad 
-Expressions -> TermD Abjad 
-Expressions -> TermE Abjad 
-Expressions -> TermF Abjad 
-Expressions -> TermG Abjad 
-Expressions -> TermH Abjad 
-Expressions -> TermI Abjad 
-Expressions -> TermJ Abjad 
-Expressions -> TermK Abjad 
-Expressions -> TermL Abjad 
-Expressions -> TermM Abjad 
-Expressions -> TermN Abjad 
-Expressions -> TermO Abjad 
-Expressions -> TermP Abjad 
-Expressions -> TermQ Abjad 
-Expressions -> TermR Abjad 
-Expressions -> TermS Abjad 
-Expressions -> TermT Abjad 
-Expressions -> TermU Abjad 
-Expressions -> TermV Abjad 
-Expressions -> TermW Abjad 
-Expressions -> TermX Abjad 
-Expressions -> TermY Abjad 
-Expressions -> TermZ Abjad 
-Expressions -> Terma Abjad 
-Expressions -> Termb Abjad 
-Expressions -> Termc Abjad 
-Expressions -> Termd Abjad 
-Expressions -> Terme Abjad 
-Expressions -> Termf Abjad 
-Expressions -> Termg Abjad 
-Expressions -> Termh Abjad 
-Expressions -> Termi Abjad 
-Expressions -> Termj Abjad 
-Expressions -> Termk Abjad 
-Expressions -> Terml Abjad 
-Expressions -> Termm Abjad 
-Expressions -> Termn Abjad 
-Expressions -> Termo Abjad 
-Expressions -> Termp Abjad 
-Expressions -> Termq Abjad 
-Expressions -> Termr Abjad 
-Expressions -> Terms Abjad 
-Expressions -> Termt Abjad 
-Expressions -> Termu Abjad 
-Expressions -> Termv Abjad 
-Expressions -> Termw Abjad 
-Expressions -> Termx Abjad 
-Expressions -> Termy Abjad 
-Expressions -> Termz Abjad 
-ForOperation -> Termfor Bin63 
-ForOperation -> Termfor Bin66 
-ForOperation -> Termfor Bin90 
-ForOperation -> Termfor Bin93 
-FromOperation -> Termfrom Bin67 
-FromOperation -> Termfrom Bin94 
-Identifier -> UnderScoreIdentifier AbjadNumber 
-Identifier -> AbjadNumber UnderScoreIdentifier 
-Identifier -> AbjadNumber Bin2 
-Identifier -> TermA Abjad 
-Identifier -> TermB Abjad 
-Identifier -> TermC Abjad 
-Identifier -> TermD Abjad 
-Identifier -> TermE Abjad 
-Identifier -> TermF Abjad 
-Identifier -> TermG Abjad 
-Identifier -> TermH Abjad 
-Identifier -> TermI Abjad 
-Identifier -> TermJ Abjad 
-Identifier -> TermK Abjad 
-Identifier -> TermL Abjad 
-Identifier -> TermM Abjad 
-Identifier -> TermN Abjad 
-Identifier -> TermO Abjad 
-Identifier -> TermP Abjad 
-Identifier -> TermQ Abjad 
-Identifier -> TermR Abjad 
-Identifier -> TermS Abjad 
-Identifier -> TermT Abjad 
-Identifier -> TermU Abjad 
-Identifier -> TermV Abjad 
-Identifier -> TermW Abjad 
-Identifier -> TermX Abjad 
-Identifier -> TermY Abjad 
-Identifier -> TermZ Abjad 
-Identifier -> Terma Abjad 
-Identifier -> Termb Abjad 
-Identifier -> Termc Abjad 
-Identifier -> Termd Abjad 
-Identifier -> Terme Abjad 
-Identifier -> Termf Abjad 
-Identifier -> Termg Abjad 
-Identifier -> Termh Abjad 
-Identifier -> Termi Abjad 
-Identifier -> Termj Abjad 
-Identifier -> Termk Abjad 
-Identifier -> Terml Abjad 
-Identifier -> Termm Abjad 
-Identifier -> Termn Abjad 
-Identifier -> Termo Abjad 
-Identifier -> Termp Abjad 
-Identifier -> Termq Abjad 
-Identifier -> Termr Abjad 
-Identifier -> Terms Abjad 
-Identifier -> Termt Abjad 
-Identifier -> Termu Abjad 
-Identifier -> Termv Abjad 
-Identifier -> Termw Abjad 
-Identifier -> Termx Abjad 
-Identifier -> Termy Abjad 
-Identifier -> Termz Abjad 
-IdentityOperation -> Atom Bin21 
-InOperation -> Identifier Bin55 
-InOperation -> Number Bin56 
-InOperation -> Identifier Bin57 
-InOperation -> Identifier Bin58 
-InOperation -> Number Bin59 
-InOperation -> Identifier Bin60 
-InOperation -> Identifier Bin82 
-InOperation -> Number Bin83 
-InOperation -> Identifier Bin84 
-InOperation -> Identifier Bin85 
-InOperation -> Number Bin86 
-InOperation -> Identifier Bin87 
+Decimal -> Integer Bin2 
+Def -> Termdef Bin138 
+Def -> Termdef Bin147 
+DictKey -> Term- NaturalNumber 
+DictKey -> NonZeroDigit #NaturalNumberTail 
+DictKey -> Integer Term. 
+DictKey -> Integer Bin2 
+DictKey -> (Number) Bin43 
+DictKey -> Term( Bin44 
+DictKey -> (Integer) Bin81 
+DictKey -> Term( Bin82 
+DictKey -> (Integer) Bin79 
+DictKey -> Term~ (Integer) 
+DictKey -> Term( Bin80 
+DictKey -> Term" Bin12 
+DictKey -> Term' Bin13 
+DictKey -> Term' Bin18 
+DictKey -> Term" Bin23 
+DictKey -> (String) Bin45 
+DictKey -> (Identifier) Bin46 
+DictKey -> (String) Bin47 
+DictKey -> (Identifier) Bin48 
+DictKey -> (String) Bin49 
+DictKey -> (String) Bin50 
+DictKey -> (Identifier) Bin51 
+DictKey -> (Identifier) Bin52 
+DictKey -> Term( Bin53 
+DictKey -> Term( Bin27 
+DictKey -> Atom Bin69 
+DictKey -> Term( Bin70 
+DictKey -> Atom Bin71 
+DictKey -> Termnot Expression 
+DictKey -> Term( Bin72 
+DictKey -> Atom Bin77 
+DictKey -> Term( Bin78 
+DictVal -> Term[ Bin26 
+DictVal -> Term( Bin27 
+DictVal -> Term- NaturalNumber 
+DictVal -> NonZeroDigit #NaturalNumberTail 
+DictVal -> Integer Term. 
+DictVal -> Integer Bin2 
+DictVal -> (Number) Bin43 
+DictVal -> Term( Bin44 
+DictVal -> (Integer) Bin81 
+DictVal -> Term( Bin82 
+DictVal -> (Integer) Bin79 
+DictVal -> Term~ (Integer) 
+DictVal -> Term( Bin80 
+DictVal -> Term" Bin12 
+DictVal -> Term' Bin13 
+DictVal -> Term' Bin18 
+DictVal -> Term" Bin23 
+DictVal -> (String) Bin45 
+DictVal -> (Identifier) Bin46 
+DictVal -> (String) Bin47 
+DictVal -> (Identifier) Bin48 
+DictVal -> (String) Bin49 
+DictVal -> (String) Bin50 
+DictVal -> (Identifier) Bin51 
+DictVal -> (Identifier) Bin52 
+DictVal -> Term( Bin53 
+DictVal -> Atom Bin69 
+DictVal -> Term( Bin70 
+DictVal -> Atom Bin71 
+DictVal -> Termnot Expression 
+DictVal -> Term( Bin72 
+DictVal -> Atom Bin77 
+DictVal -> Term( Bin78 
+Dictionary -> Term{ Bin41 
+DictionaryLoop -> DictKey Bin39 
+DictionaryLoop -> DictKey Bin40 
+Expression -> (Number) Bin43 
+Expression -> Term( Bin44 
+Expression -> (String) Bin45 
+Expression -> (Identifier) Bin46 
+Expression -> (String) Bin47 
+Expression -> (Identifier) Bin48 
+Expression -> (String) Bin49 
+Expression -> (String) Bin50 
+Expression -> (Identifier) Bin51 
+Expression -> (Identifier) Bin52 
+Expression -> Term( Bin53 
+Expression -> (Identifier) Bin68 
+Expression -> Atom Bin69 
+Expression -> Term( Bin70 
+Expression -> Atom Bin71 
+Expression -> Termnot Expression 
+Expression -> Term( Bin72 
+Expression -> Atom Bin73 
+Expression -> Atom Bin75 
+Expression -> Term( Bin76 
+Expression -> Atom Bin77 
+Expression -> Term( Bin78 
+Expression -> (Integer) Bin79 
+Expression -> Term~ (Integer) 
+Expression -> Term( Bin80 
+Expression -> (Integer) Bin81 
+Expression -> Term( Bin82 
+Expression -> Term( Bin42 
+Expression -> IdentifierCharacters #IdentifierTail 
+Expression -> Identifier Bin4 
+Expression -> Identifier Slicer 
+Expression -> Identifier Bin6 
+Expression -> Variable Bin10 
+Expression -> Iterable Slicer 
+Expression -> Term" Bin12 
+Expression -> Term' Bin13 
+Expression -> Term' Bin18 
+Expression -> Term" Bin23 
+Expression -> Term[ Bin26 
+Expression -> Term( Bin27 
+Expression -> Term{ Bin41 
+Expression -> (Identifier) Bin58 
+Expression -> (Identifier) Bin59 
+Expression -> (Identifier) Bin61 
+Expression -> (Identifier) Bin63 
+Expression -> (Identifier) Bin65 
+Expression -> (Identifier) Bin67 
+ForLoop -> Termfor Bin101 
+ForLoop -> Termfor Bin107 
+FromName -> ImportName FromName 
+FromName -> Term. FromName 
+FromName -> IdentifierCharacters #IdentifierTail 
+Function -> Variable Bin10 
+Identifier -> IdentifierCharacters #IdentifierTail 
+Identifier -> Identifier Bin4 
+Identifier -> Identifier Slicer 
+Identifier -> Identifier Bin6 
+Identifier -> Variable Bin10 
+IdentityOperation -> Atom Bin73 
+IdentityOperation -> Atom Bin75 
+IdentityOperation -> Term( Bin76 
+Import -> Termimport ImportName 
+Import -> Termfrom Bin113 
+Import -> Termimport Bin115 
+Import -> Termfrom Bin119 
+ImportName -> IdentifierCharacters #IdentifierTail 
 Indentation -> Indentation Term\t 
-Integer -> Digit NaturalNumber 
-Integer -> 1 TermDigit 
-Integer -> 2 TermDigit 
-Integer -> 3 TermDigit 
-Integer -> 4 TermDigit 
-Integer -> 5 TermDigit 
-Integer -> 6 TermDigit 
-Integer -> 7 TermDigit 
-Integer -> 8 TermDigit 
-Integer -> 9 TermDigit 
-Integer -> Atom Bin19 
-Integer -> Atom Bin20 
-IsOperation -> IsOperator Bin68 
-IsOperation -> IsOperator Bin95 
-IsOperator -> Term[ Bin9 
-IsOperator -> Term[ Bin10 
-IsOperator -> Term[ Bin11 
-IsOperator -> Term[ Bin12 
-IsOperator -> Term( Bin13 
-IsOperator -> Term( Bin14 
-IsOperator -> Term{ Bin15 
-IsOperator -> Term{ Bin16 
-IsOperator -> Atom Bin19 
-IsOperator -> Atom Bin20 
-List -> Term[ Bin9 
-List -> Term[ Bin10 
-List -> Term[ Bin11 
-List -> Term[ Bin12 
-LogicalOperation -> Atom Bin20 
-NaturalNumber -> Digit NaturalNumber 
-NaturalNumber -> 1 TermDigit 
-NaturalNumber -> 2 TermDigit 
-NaturalNumber -> 3 TermDigit 
-NaturalNumber -> 4 TermDigit 
-NaturalNumber -> 5 TermDigit 
-NaturalNumber -> 6 TermDigit 
-NaturalNumber -> 7 TermDigit 
-NaturalNumber -> 8 TermDigit 
-NaturalNumber -> 9 TermDigit 
-NaturalNumber -> Atom Bin19 
-NaturalNumber -> Atom Bin20 
-NonZeroDigit -> 1 TermDigit 
-NonZeroDigit -> 2 TermDigit 
-NonZeroDigit -> 3 TermDigit 
-NonZeroDigit -> 4 TermDigit 
-NonZeroDigit -> 5 TermDigit 
-NonZeroDigit -> 6 TermDigit 
-NonZeroDigit -> 7 TermDigit 
-NonZeroDigit -> 8 TermDigit 
-NonZeroDigit -> 9 TermDigit 
-NoneType -> Atom Bin19 
-NoneType -> Atom Bin20 
-Number -> Decimal Bin1 
-Number -> Digit NaturalNumber 
-Number -> 1 TermDigit 
-Number -> 2 TermDigit 
-Number -> 3 TermDigit 
-Number -> 4 TermDigit 
-Number -> 5 TermDigit 
-Number -> 6 TermDigit 
-Number -> 7 TermDigit 
-Number -> 8 TermDigit 
-Number -> 9 TermDigit 
+Integer -> Term- NaturalNumber 
+Integer -> NonZeroDigit #NaturalNumberTail 
+Integer -> Atom Bin69 
+Integer -> Term( Bin70 
+Integer -> Atom Bin71 
+Integer -> Termnot Expression 
+Integer -> Term( Bin72 
+Integer -> Atom Bin77 
+Integer -> Term( Bin78 
+Iterable -> Term( Bin27 
+Iterable -> Term" Bin12 
+Iterable -> Term' Bin13 
+Iterable -> Term' Bin18 
+Iterable -> Term" Bin23 
+Iterable -> (String) Bin45 
+Iterable -> (Identifier) Bin46 
+Iterable -> (String) Bin47 
+Iterable -> (Identifier) Bin48 
+Iterable -> (String) Bin49 
+Iterable -> (String) Bin50 
+Iterable -> (Identifier) Bin51 
+Iterable -> (Identifier) Bin52 
+Iterable -> Term( Bin53 
+Iterable -> Term[ Bin26 
+IterableItemLoop -> Expression Bin25 
+IterableItemLoop -> (Number) Bin43 
+IterableItemLoop -> Term( Bin44 
+IterableItemLoop -> (String) Bin45 
+IterableItemLoop -> (Identifier) Bin46 
+IterableItemLoop -> (String) Bin47 
+IterableItemLoop -> (Identifier) Bin48 
+IterableItemLoop -> (String) Bin49 
+IterableItemLoop -> (String) Bin50 
+IterableItemLoop -> (Identifier) Bin51 
+IterableItemLoop -> (Identifier) Bin52 
+IterableItemLoop -> Term( Bin53 
+IterableItemLoop -> (Identifier) Bin68 
+IterableItemLoop -> (Identifier) Bin58 
+IterableItemLoop -> (Identifier) Bin59 
+IterableItemLoop -> (Identifier) Bin61 
+IterableItemLoop -> (Identifier) Bin63 
+IterableItemLoop -> (Identifier) Bin65 
+IterableItemLoop -> (Identifier) Bin67 
+IterableItemLoop -> Atom Bin69 
+IterableItemLoop -> Term( Bin70 
+IterableItemLoop -> Atom Bin71 
+IterableItemLoop -> Termnot Expression 
+IterableItemLoop -> Term( Bin72 
+IterableItemLoop -> Atom Bin73 
+IterableItemLoop -> Atom Bin75 
+IterableItemLoop -> Term( Bin76 
+IterableItemLoop -> Atom Bin77 
+IterableItemLoop -> Term( Bin78 
+IterableItemLoop -> (Integer) Bin79 
+IterableItemLoop -> Term~ (Integer) 
+IterableItemLoop -> Term( Bin80 
+IterableItemLoop -> (Integer) Bin81 
+IterableItemLoop -> Term( Bin82 
+IterableItemLoop -> Term( Bin42 
+IterableItemLoop -> IdentifierCharacters #IdentifierTail 
+IterableItemLoop -> Identifier Bin4 
+IterableItemLoop -> Identifier Slicer 
+IterableItemLoop -> Identifier Bin6 
+IterableItemLoop -> Variable Bin10 
+IterableItemLoop -> Iterable Slicer 
+IterableItemLoop -> Term" Bin12 
+IterableItemLoop -> Term' Bin13 
+IterableItemLoop -> Term' Bin18 
+IterableItemLoop -> Term" Bin23 
+IterableItemLoop -> Term[ Bin26 
+IterableItemLoop -> Term( Bin27 
+IterableItemLoop -> Term{ Bin41 
+List -> Term[ Bin26 
+Literal -> Iterable Slicer 
+Literal -> Term" Bin12 
+Literal -> Term' Bin13 
+Literal -> Term' Bin18 
+Literal -> Term" Bin23 
+Literal -> (String) Bin45 
+Literal -> (Identifier) Bin46 
+Literal -> (String) Bin47 
+Literal -> (Identifier) Bin48 
+Literal -> (String) Bin49 
+Literal -> (String) Bin50 
+Literal -> (Identifier) Bin51 
+Literal -> (Identifier) Bin52 
+Literal -> Term( Bin53 
+Literal -> Term[ Bin26 
+Literal -> Term( Bin27 
+Literal -> Term{ Bin41 
+LogicalOperation -> Atom Bin71 
+LogicalOperation -> Termnot Expression 
+LogicalOperation -> Term( Bin72 
+LoopCode -> (Number) Bin43 
+LoopCode -> Term( Bin44 
+LoopCode -> (String) Bin45 
+LoopCode -> (Identifier) Bin46 
+LoopCode -> (String) Bin47 
+LoopCode -> (Identifier) Bin48 
+LoopCode -> (String) Bin49 
+LoopCode -> (String) Bin50 
+LoopCode -> (Identifier) Bin51 
+LoopCode -> (Identifier) Bin52 
+LoopCode -> Term( Bin53 
+LoopCode -> (Identifier) Bin68 
+LoopCode -> Atom Bin69 
+LoopCode -> Term( Bin70 
+LoopCode -> Atom Bin71 
+LoopCode -> Termnot Expression 
+LoopCode -> Term( Bin72 
+LoopCode -> Atom Bin73 
+LoopCode -> Atom Bin75 
+LoopCode -> Term( Bin76 
+LoopCode -> Atom Bin77 
+LoopCode -> Term( Bin78 
+LoopCode -> (Integer) Bin79 
+LoopCode -> Term~ (Integer) 
+LoopCode -> Term( Bin80 
+LoopCode -> (Integer) Bin81 
+LoopCode -> Term( Bin82 
+LoopCode -> Term( Bin42 
+LoopCode -> IdentifierCharacters #IdentifierTail 
+LoopCode -> Identifier Bin4 
+LoopCode -> Identifier Slicer 
+LoopCode -> Identifier Bin6 
+LoopCode -> Variable Bin10 
+LoopCode -> Iterable Slicer 
+LoopCode -> Term" Bin12 
+LoopCode -> Term' Bin13 
+LoopCode -> Term' Bin18 
+LoopCode -> Term" Bin23 
+LoopCode -> Term[ Bin26 
+LoopCode -> Term( Bin27 
+LoopCode -> Term{ Bin41 
+LoopCode -> Termif Bin87 
+LoopCode -> Termfor Bin101 
+LoopCode -> Termfor Bin107 
+LoopCode -> Termwhile Bin111 
+LoopCode -> Termimport ImportName 
+LoopCode -> Termfrom Bin113 
+LoopCode -> Termimport Bin115 
+LoopCode -> Termfrom Bin119 
+LoopCode -> Termclass Bin124 
+LoopCode -> Termclass Bin131 
+LoopCode -> Termdef Bin138 
+LoopCode -> Termdef Bin147 
+LoopCode -> Termraise ImportName 
+LoopCode -> Termraise Bin150 
+LoopCode -> Termwith Bin156 
+LoopCode -> (Identifier) Bin58 
+LoopCode -> (Identifier) Bin59 
+LoopCode -> (Identifier) Bin61 
+LoopCode -> (Identifier) Bin63 
+LoopCode -> (Identifier) Bin65 
+LoopCode -> (Identifier) Bin67 
+LoopRunCode -> LoopCode LoopRunCode 
+LoopRunCode -> (Number) Bin43 
+LoopRunCode -> Term( Bin44 
+LoopRunCode -> (String) Bin45 
+LoopRunCode -> (Identifier) Bin46 
+LoopRunCode -> (String) Bin47 
+LoopRunCode -> (Identifier) Bin48 
+LoopRunCode -> (String) Bin49 
+LoopRunCode -> (String) Bin50 
+LoopRunCode -> (Identifier) Bin51 
+LoopRunCode -> (Identifier) Bin52 
+LoopRunCode -> Term( Bin53 
+LoopRunCode -> (Identifier) Bin68 
+LoopRunCode -> Atom Bin69 
+LoopRunCode -> Term( Bin70 
+LoopRunCode -> Atom Bin71 
+LoopRunCode -> Termnot Expression 
+LoopRunCode -> Term( Bin72 
+LoopRunCode -> Atom Bin73 
+LoopRunCode -> Atom Bin75 
+LoopRunCode -> Term( Bin76 
+LoopRunCode -> Atom Bin77 
+LoopRunCode -> Term( Bin78 
+LoopRunCode -> (Integer) Bin79 
+LoopRunCode -> Term~ (Integer) 
+LoopRunCode -> Term( Bin80 
+LoopRunCode -> (Integer) Bin81 
+LoopRunCode -> Term( Bin82 
+LoopRunCode -> Term( Bin42 
+LoopRunCode -> IdentifierCharacters #IdentifierTail 
+LoopRunCode -> Identifier Bin4 
+LoopRunCode -> Identifier Slicer 
+LoopRunCode -> Identifier Bin6 
+LoopRunCode -> Variable Bin10 
+LoopRunCode -> Iterable Slicer 
+LoopRunCode -> Term" Bin12 
+LoopRunCode -> Term' Bin13 
+LoopRunCode -> Term' Bin18 
+LoopRunCode -> Term" Bin23 
+LoopRunCode -> Term[ Bin26 
+LoopRunCode -> Term( Bin27 
+LoopRunCode -> Term{ Bin41 
+LoopRunCode -> (Identifier) Bin58 
+LoopRunCode -> (Identifier) Bin59 
+LoopRunCode -> (Identifier) Bin61 
+LoopRunCode -> (Identifier) Bin63 
+LoopRunCode -> (Identifier) Bin65 
+LoopRunCode -> (Identifier) Bin67 
+LoopRunCode -> Termif Bin87 
+LoopRunCode -> Termfor Bin101 
+LoopRunCode -> Termfor Bin107 
+LoopRunCode -> Termwhile Bin111 
+LoopRunCode -> Termimport ImportName 
+LoopRunCode -> Termfrom Bin113 
+LoopRunCode -> Termimport Bin115 
+LoopRunCode -> Termfrom Bin119 
+LoopRunCode -> Termclass Bin124 
+LoopRunCode -> Termclass Bin131 
+LoopRunCode -> Termdef Bin138 
+LoopRunCode -> Termdef Bin147 
+LoopRunCode -> Termraise ImportName 
+LoopRunCode -> Termraise Bin150 
+LoopRunCode -> Termwith Bin156 
+MembershipOperation -> Atom Bin77 
+MembershipOperation -> Term( Bin78 
+NaturalNumber -> NonZeroDigit #NaturalNumberTail 
+NaturalNumber -> Atom Bin69 
+NaturalNumber -> Term( Bin70 
+NaturalNumber -> Atom Bin71 
+NaturalNumber -> Termnot Expression 
+NaturalNumber -> Term( Bin72 
+NaturalNumber -> Atom Bin77 
+NaturalNumber -> Term( Bin78 
+Number -> Term- NaturalNumber 
+Number -> NonZeroDigit #NaturalNumberTail 
 Number -> Integer Term. 
-Number -> Integer Bin0 
-Number -> Number Bin17 
-Number -> Atom Bin19 
-Number -> Atom Bin20 
-NumberLoop -> NumberLoop Bin4 
-NumberLoop -> Decimal Bin1 
-NumberLoop -> Digit NaturalNumber 
-NumberLoop -> 1 TermDigit 
-NumberLoop -> 2 TermDigit 
-NumberLoop -> 3 TermDigit 
-NumberLoop -> 4 TermDigit 
-NumberLoop -> 5 TermDigit 
-NumberLoop -> 6 TermDigit 
-NumberLoop -> 7 TermDigit 
-NumberLoop -> 8 TermDigit 
-NumberLoop -> 9 TermDigit 
-NumberLoop -> Integer Term. 
-NumberLoop -> Integer Bin0 
-NumberLoop -> Number Bin17 
-NumberLoop -> Atom Bin19 
-NumberLoop -> Atom Bin20 
-PassOperration -> Indentation Pass 
-RaiseOperation -> Indentation Bin72 
-RaiseOperation -> Indentation Bin99 
-ReturnOperation -> Indentation Bin73 
-ReturnOperation -> Indentation Bin100 
-Simple -> Values NonZeroDigit 
-Simple -> NumberLoop |SomeType 
-Simple -> Digit NaturalNumber 
-Simple -> Integer Term. 
-Simple -> Integer Bin0 
-Simple -> Decimal Bin1 
-Simple -> Terma Abjad 
-Simple -> Termb Abjad 
-Simple -> Termc Abjad 
-Simple -> Termd Abjad 
-Simple -> Terme Abjad 
-Simple -> Termf Abjad 
-Simple -> Termg Abjad 
-Simple -> Termh Abjad 
-Simple -> Termi Abjad 
-Simple -> Termj Abjad 
-Simple -> Termk Abjad 
-Simple -> Terml Abjad 
-Simple -> Termm Abjad 
-Simple -> Termn Abjad 
-Simple -> Termo Abjad 
-Simple -> Termp Abjad 
-Simple -> Termq Abjad 
-Simple -> Termr Abjad 
-Simple -> Terms Abjad 
-Simple -> Termt Abjad 
-Simple -> Termu Abjad 
-Simple -> Termv Abjad 
-Simple -> Termw Abjad 
-Simple -> Termx Abjad 
-Simple -> Termy Abjad 
-Simple -> Termz Abjad 
-Simple -> TermA Abjad 
-Simple -> TermB Abjad 
-Simple -> TermC Abjad 
-Simple -> TermD Abjad 
-Simple -> TermE Abjad 
-Simple -> TermF Abjad 
-Simple -> TermG Abjad 
-Simple -> TermH Abjad 
-Simple -> TermI Abjad 
-Simple -> TermJ Abjad 
-Simple -> TermK Abjad 
-Simple -> TermL Abjad 
-Simple -> TermM Abjad 
-Simple -> TermN Abjad 
-Simple -> TermO Abjad 
-Simple -> TermP Abjad 
-Simple -> TermQ Abjad 
-Simple -> TermR Abjad 
-Simple -> TermS Abjad 
-Simple -> TermT Abjad 
-Simple -> TermU Abjad 
-Simple -> TermV Abjad 
-Simple -> TermW Abjad 
-Simple -> TermX Abjad 
-Simple -> TermY Abjad 
-Simple -> TermZ Abjad 
-Simple -> UnderScoreIdentifier AbjadNumber 
-Simple -> AbjadNumber UnderScoreIdentifier 
-Simple -> AbjadNumber Bin2 
-Simple -> Indentation Term\t 
-Simple -> StringLoop Bin3 
-Simple -> Dictionary Bin7 
-Simple -> SomeType Bin8 
-Simple -> Term[ Bin9 
-Simple -> Term[ Bin10 
-Simple -> Term[ Bin11 
-Simple -> Term[ Bin12 
-Simple -> Term( Bin13 
-Simple -> Term( Bin14 
-Simple -> Term{ Bin15 
-Simple -> Term{ Bin16 
-Simple -> 1 TermDigit 
-Simple -> 2 TermDigit 
-Simple -> 3 TermDigit 
-Simple -> 4 TermDigit 
-Simple -> 5 TermDigit 
-Simple -> 6 TermDigit 
-Simple -> 7 TermDigit 
-Simple -> 8 TermDigit 
-Simple -> 9 TermDigit 
-Simple -> Atom Bin19 
-Simple -> Atom Bin20 
-Simple -> Number Bin17 
-SomeType -> Decimal Bin1 
-SomeType -> Digit NaturalNumber 
-SomeType -> 1 TermDigit 
-SomeType -> 2 TermDigit 
-SomeType -> 3 TermDigit 
-SomeType -> 4 TermDigit 
-SomeType -> 5 TermDigit 
-SomeType -> 6 TermDigit 
-SomeType -> 7 TermDigit 
-SomeType -> 8 TermDigit 
-SomeType -> 9 TermDigit 
-SomeType -> Integer Term. 
-SomeType -> Integer Bin0 
-SomeType -> Number Bin17 
-SomeType -> Term( Bin13 
-SomeType -> Term( Bin14 
-SomeType -> Atom Bin19 
-SomeType -> Atom Bin20 
-StringLoop -> StringLoop Bin3 
-Tuple -> Term( Bin13 
-Tuple -> Term( Bin14 
-UnderScoreIdentifier -> UnderScoreIdentifier AbjadNumber 
-UnderScoreIdentifier -> AbjadNumber UnderScoreIdentifier 
-UnderScoreIdentifier -> AbjadNumber Bin2 
-WhileOperation -> WhileOperator Bin36 
-WhileOperation -> WhileOperator Bin41 
-WhileOperation -> WhileOperator Bin44 
-WhileOperation -> WhileOperator Bin49 
-WithOperation -> Termwith Bin78 
-WithOperation -> Termwith Bin105 
+Number -> Integer Bin2 
+Number -> (Number) Bin43 
+Number -> Term( Bin44 
+Number -> (Integer) Bin81 
+Number -> Term( Bin82 
+Number -> (Integer) Bin79 
+Number -> Term~ (Integer) 
+Number -> Term( Bin80 
+Number -> Atom Bin69 
+Number -> Term( Bin70 
+Number -> Atom Bin71 
+Number -> Termnot Expression 
+Number -> Term( Bin72 
+Number -> Atom Bin77 
+Number -> Term( Bin78 
+NumericAssignmentOperation -> (Identifier) Bin58 
+NumericAssignmentOperation -> (Identifier) Bin59 
+NumericAssignmentOperator -> Term+ Term= 
+NumericAssignmentOperator -> Term- Term= 
+NumericAssignmentOperator -> Term* Term= 
+NumericAssignmentOperator -> Term/ Term= 
+NumericAssignmentOperator -> Term% Term= 
+NumericAssignmentOperator -> Term* Bin54 
+NumericAssignmentOperator -> Term/ Bin55 
+NumericAssignmentOperator -> Term& Term= 
+NumericAssignmentOperator -> Term| Term= 
+NumericAssignmentOperator -> Term^ Term= 
+NumericAssignmentOperator -> Term> Bin56 
+NumericAssignmentOperator -> Term< Bin57 
+Parameter -> ImportName Term, 
+Parameter -> IdentifierCharacters #IdentifierTail 
+Raise -> Termraise ImportName 
+Raise -> Termraise Bin150 
+RunCode -> Code RunCode 
+RunCode -> (Number) Bin43 
+RunCode -> Term( Bin44 
+RunCode -> (String) Bin45 
+RunCode -> (Identifier) Bin46 
+RunCode -> (String) Bin47 
+RunCode -> (Identifier) Bin48 
+RunCode -> (String) Bin49 
+RunCode -> (String) Bin50 
+RunCode -> (Identifier) Bin51 
+RunCode -> (Identifier) Bin52 
+RunCode -> Term( Bin53 
+RunCode -> (Identifier) Bin68 
+RunCode -> Atom Bin69 
+RunCode -> Term( Bin70 
+RunCode -> Atom Bin71 
+RunCode -> Termnot Expression 
+RunCode -> Term( Bin72 
+RunCode -> Atom Bin73 
+RunCode -> Atom Bin75 
+RunCode -> Term( Bin76 
+RunCode -> Atom Bin77 
+RunCode -> Term( Bin78 
+RunCode -> (Integer) Bin79 
+RunCode -> Term~ (Integer) 
+RunCode -> Term( Bin80 
+RunCode -> (Integer) Bin81 
+RunCode -> Term( Bin82 
+RunCode -> Term( Bin42 
+RunCode -> IdentifierCharacters #IdentifierTail 
+RunCode -> Identifier Bin4 
+RunCode -> Identifier Slicer 
+RunCode -> Identifier Bin6 
+RunCode -> Variable Bin10 
+RunCode -> Iterable Slicer 
+RunCode -> Term" Bin12 
+RunCode -> Term' Bin13 
+RunCode -> Term' Bin18 
+RunCode -> Term" Bin23 
+RunCode -> Term[ Bin26 
+RunCode -> Term( Bin27 
+RunCode -> Term{ Bin41 
+RunCode -> Termif Bin87 
+RunCode -> Termfor Bin101 
+RunCode -> Termfor Bin107 
+RunCode -> Termwhile Bin111 
+RunCode -> Termimport ImportName 
+RunCode -> Termfrom Bin113 
+RunCode -> Termimport Bin115 
+RunCode -> Termfrom Bin119 
+RunCode -> Termclass Bin124 
+RunCode -> Termclass Bin131 
+RunCode -> Termdef Bin138 
+RunCode -> Termdef Bin147 
+RunCode -> Termraise ImportName 
+RunCode -> Termraise Bin150 
+RunCode -> Termwith Bin156 
+RunCode -> (Identifier) Bin58 
+RunCode -> (Identifier) Bin59 
+RunCode -> (Identifier) Bin61 
+RunCode -> (Identifier) Bin63 
+RunCode -> (Identifier) Bin65 
+RunCode -> (Identifier) Bin67 
+S0 -> Code RunCode 
+S0 -> Termif Bin87 
+S0 -> Termfor Bin101 
+S0 -> Termfor Bin107 
+S0 -> Termwhile Bin111 
+S0 -> Termimport ImportName 
+S0 -> Termfrom Bin113 
+S0 -> Termimport Bin115 
+S0 -> Termfrom Bin119 
+S0 -> Termclass Bin124 
+S0 -> Termclass Bin131 
+S0 -> Termdef Bin138 
+S0 -> Termdef Bin147 
+S0 -> Termraise ImportName 
+S0 -> Termraise Bin150 
+S0 -> Termwith Bin156 
+S0 -> (Number) Bin43 
+S0 -> Term( Bin44 
+S0 -> (String) Bin45 
+S0 -> (Identifier) Bin46 
+S0 -> (String) Bin47 
+S0 -> (Identifier) Bin48 
+S0 -> (String) Bin49 
+S0 -> (String) Bin50 
+S0 -> (Identifier) Bin51 
+S0 -> (Identifier) Bin52 
+S0 -> Term( Bin53 
+S0 -> (Identifier) Bin68 
+S0 -> (Identifier) Bin58 
+S0 -> (Identifier) Bin59 
+S0 -> (Identifier) Bin61 
+S0 -> (Identifier) Bin63 
+S0 -> (Identifier) Bin65 
+S0 -> (Identifier) Bin67 
+S0 -> Atom Bin69 
+S0 -> Term( Bin70 
+S0 -> Atom Bin71 
+S0 -> Termnot Expression 
+S0 -> Term( Bin72 
+S0 -> Atom Bin73 
+S0 -> Atom Bin75 
+S0 -> Term( Bin76 
+S0 -> Atom Bin77 
+S0 -> Term( Bin78 
+S0 -> (Integer) Bin79 
+S0 -> Term~ (Integer) 
+S0 -> Term( Bin80 
+S0 -> (Integer) Bin81 
+S0 -> Term( Bin82 
+S0 -> Term( Bin42 
+S0 -> IdentifierCharacters #IdentifierTail 
+S0 -> Identifier Bin4 
+S0 -> Identifier Slicer 
+S0 -> Identifier Bin6 
+S0 -> Variable Bin10 
+S0 -> Iterable Slicer 
+S0 -> Term" Bin12 
+S0 -> Term' Bin13 
+S0 -> Term' Bin18 
+S0 -> Term" Bin23 
+S0 -> Term[ Bin26 
+S0 -> Term( Bin27 
+S0 -> Term{ Bin41 
+Slicer -> Term[ Bin32 
+Slicer -> Term[ Bin35 
+Slicer -> Term[ Bin36 
+SlicerValue -> Term( Bin1 
+SlicerValue -> Term- NaturalNumber 
+SlicerValue -> NonZeroDigit #NaturalNumberTail 
+SlicerValue -> Term( Bin11 
+SlicerValue -> IdentifierCharacters #IdentifierTail 
+SlicerValue -> Identifier Bin4 
+SlicerValue -> Identifier Slicer 
+SlicerValue -> Identifier Bin6 
+SlicerValue -> Variable Bin10 
+SlicerValue -> Atom Bin69 
+SlicerValue -> Term( Bin70 
+SlicerValue -> Atom Bin71 
+SlicerValue -> Termnot Expression 
+SlicerValue -> Term( Bin72 
+SlicerValue -> Atom Bin77 
+SlicerValue -> Term( Bin78 
+String -> Term" Bin12 
+String -> Term' Bin13 
+String -> Term' Bin18 
+String -> Term" Bin23 
+String -> (String) Bin45 
+String -> (Identifier) Bin46 
+String -> (String) Bin47 
+String -> (Identifier) Bin48 
+String -> (String) Bin49 
+String -> (String) Bin50 
+String -> (Identifier) Bin51 
+String -> (Identifier) Bin52 
+String -> Term( Bin53 
+StringAcceptedCharacters -> IdentifierCharacters #IdentifierTail 
+StringAcceptedCharacters -> Identifier Bin4 
+StringAcceptedCharacters -> Identifier Slicer 
+StringAcceptedCharacters -> Identifier Bin6 
+StringAcceptedCharacters -> Variable Bin10 
+StringAcceptedCharacters -> Term- NaturalNumber 
+StringAcceptedCharacters -> NonZeroDigit #NaturalNumberTail 
+StringAcceptedCharacters -> Integer Term. 
+StringAcceptedCharacters -> Integer Bin2 
+StringAcceptedCharacters -> (Number) Bin43 
+StringAcceptedCharacters -> Term( Bin44 
+StringAcceptedCharacters -> (Integer) Bin81 
+StringAcceptedCharacters -> Term( Bin82 
+StringAcceptedCharacters -> (Integer) Bin79 
+StringAcceptedCharacters -> Term~ (Integer) 
+StringAcceptedCharacters -> Term( Bin80 
+StringAcceptedCharacters -> Atom Bin69 
+StringAcceptedCharacters -> Term( Bin70 
+StringAcceptedCharacters -> Atom Bin71 
+StringAcceptedCharacters -> Termnot Expression 
+StringAcceptedCharacters -> Term( Bin72 
+StringAcceptedCharacters -> Atom Bin77 
+StringAcceptedCharacters -> Term( Bin78 
+StringAssignmentOperation -> (Identifier) Bin61 
+StringAssignmentOperation -> (Identifier) Bin63 
+StringAssignmentOperation -> (Identifier) Bin65 
+StringAssignmentOperation -> (Identifier) Bin67 
+StringLoop -> StringAcceptedCharacters StringLoop 
+StringLoop -> IdentifierCharacters #IdentifierTail 
+StringLoop -> Identifier Bin4 
+StringLoop -> Identifier Slicer 
+StringLoop -> Identifier Bin6 
+StringLoop -> Variable Bin10 
+StringLoop -> Term- NaturalNumber 
+StringLoop -> NonZeroDigit #NaturalNumberTail 
+StringLoop -> Integer Term. 
+StringLoop -> Integer Bin2 
+StringLoop -> (Number) Bin43 
+StringLoop -> Term( Bin44 
+StringLoop -> (Integer) Bin81 
+StringLoop -> Term( Bin82 
+StringLoop -> (Integer) Bin79 
+StringLoop -> Term~ (Integer) 
+StringLoop -> Term( Bin80 
+StringLoop -> Atom Bin69 
+StringLoop -> Term( Bin70 
+StringLoop -> Atom Bin71 
+StringLoop -> Termnot Expression 
+StringLoop -> Term( Bin72 
+StringLoop -> Atom Bin77 
+StringLoop -> Term( Bin78 
+StringOperation -> (String) Bin45 
+StringOperation -> (Identifier) Bin46 
+StringOperation -> (String) Bin47 
+StringOperation -> (Identifier) Bin48 
+StringOperation -> (String) Bin49 
+StringOperation -> (String) Bin50 
+StringOperation -> (Identifier) Bin51 
+StringOperation -> (Identifier) Bin52 
+StringOperation -> Term( Bin53 
+StringWithEnterLoop -> StringAcceptedCharacters StringWithEnterLoop 
+StringWithEnterLoop -> Newline StringWithEnterLoop 
+Tuple -> Term( Bin27 
+Variable -> IdentifierCharacters #IdentifierTail 
+Variable -> Identifier Bin4 
+Variable -> Identifier Slicer 
+Variable -> Identifier Bin6 
+WhileLoop -> Termwhile Bin111 
+With -> Termwith Bin156 

@@ -61,28 +61,30 @@ def generate_cnf () -> (list, list):
 
 
     # STEP 1: START
-    print("----- STEP 1: ADDING START STATES -----")
+    #print("----- STEP 1: ADDING START STATES -----")
     startProd = CFGProduction()
     startProd.name = "S0"
     startProdResult = CFGSymbol()
-    startProdResult.type = "terminal"
+    startProdResult.type = "variable"
     startProdResult.value = cfg[0].name
     startProd.result.append(startProdResult)
     cfg.insert(0, startProd)
+    '''
     print(startProd.name, "->", startProdResult.value)
     print("\n\n")
-
+    '''
 
     # STEP 2: TERM
-    print("STEP 2: REMOVE TERMINAL + VARIABLE PRODUCTIONS")
+    #print("STEP 2: REMOVE TERMINAL + VARIABLE PRODUCTIONS")
     for prod in cfg:
         for result in prod.result:
             if (result.type == "terminal" and len(prod.result) != 1):
+                '''
                 print(prod.name, "->", prod.result[0].value, end=" ")
                 for i in range(len(prod.result) - 1):
                     print(prod.result[i + 1].value, end=" ")
                 print()
-                
+                '''
                 newProd = CFGProduction()
                 newProd.name = "Term" + result.value
                 newProd.result.append(CFGSymbol())
@@ -92,23 +94,24 @@ def generate_cnf () -> (list, list):
                 result.type = "variable"
                 result.value = newProd.name
 
-                print("\t", prod.name, "->", prod.result[0].value, end=" ")
-                for i in range(len(prod.result) - 1):
-                    print(prod.result[i + 1].value, end=" ")
-                print("\n")
-    print("\n")
-
+    #             print("\t", prod.name, "->", prod.result[0].value, end=" ")
+    #             for i in range(len(prod.result) - 1):
+    #                 print(prod.result[i + 1].value, end=" ")
+    #             print("\n")
+    # print("\n")
+    
     # STEP 3: BIN
-    print("STEP 3: SPLITTING PRODUCTIONS", end = "")
+    #print("STEP 3: SPLITTING PRODUCTIONS", end = "")
     binString = 0
     for prod in cfg:
-        if (len(prod.result) > 2):
-            print()
+        
+        # if (len(prod.result) > 2):
+        #     print()
         while (len(prod.result) > 2):
-            print(prod.name, "->", prod.result[0].value, end=" ")
-            for i in range(len(prod.result) - 1):
-                print(prod.result[i + 1].value, end=" ")
-            print()
+            # print(prod.name, "->", prod.result[0].value, end=" ")
+            # for i in range(len(prod.result) - 1):
+            #     print(prod.result[i + 1].value, end=" ")
+            # print()
 
             newProd = CFGProduction()
             newProd.name = "Bin" + str(binString)
@@ -126,61 +129,77 @@ def generate_cnf () -> (list, list):
             prod.result[-1].type = "variable"
             prod.result[-1].value = newProd.name
             
-            print("\t", prod.name, "->", prod.result[0].value, end=" ")
-            for i in range(len(prod.result) - 1):
-                print(prod.result[i + 1].value, end=" ")
-            print()
-            print("\t", newProd.name, "->", newProd.result[0].value, newProd.result[1].value)
-    print("\n\n")
+    #         print("\t", prod.name, "->", prod.result[0].value, end=" ")
+    #         for i in range(len(prod.result) - 1):
+    #             print(prod.result[i + 1].value, end=" ")
+    #         print()
+    #         print("\t", newProd.name, "->", newProd.result[0].value, newProd.result[1].value)
+    # print("\n\n")
 
     # STEP 4: DEL
-    print("STEP 4: REMOVING EPSILON PRODUCTIONS")
+    #print("STEP 4: REMOVING EPSILON PRODUCTIONS")
     epsilonless = False
     while not epsilonless:
         epsilonless = True
         for prod in cfg:
             for result in prod.result:
                 if result.type == "variable" and result.value == "e":
-                    print(prod.name, "->", prod.result[0].value, end=" ")
-                    for i in range(len(prod.result) - 1):
-                        print(prod.result[i + 1].value, end=" ")
-                    print()
+                    # print(prod.name, "->", prod.result[0].value, end=" ")
+                    # for i in range(len(prod.result) - 1):
+                    #     print(prod.result[i + 1].value, end=" ")
+                    # print()
 
                     prod.result.remove(result)
 
-                    if (len(prod.result) > 0):
-                        print("\t", prod.name, "->", prod.result[0].value, end=" ")
-                        for i in range(len(prod.result) - 1):
-                            print(prod.result[i + 1].value, end=" ")
-                        print()
+                    # if (len(prod.result) > 0):
+                    #     print("\t", prod.name, "->", prod.result[0].value, end=" ")
+                    #     for i in range(len(prod.result) - 1):
+                    #         print(prod.result[i + 1].value, end=" ")
+                    #     print()
             if len(prod.result) == 0:
-                epsilonless = False
+                exists = False
                 for delEProd in cfg:
-                    for delERes in delEProd.result:
-                        if delERes.type == "variable" and delERes.value == prod.name:
-                            print(delEProd.name, "->", delEProd.result[0].value, end=" ")
-                            for i in range(len(delEProd.result) - 1):
-                                print(delEProd.result[i + 1].value, end=" ")
-                            print()
+                    if delEProd.name == prod.name:
+                        exists = True
+                        break
+                epsilonless = False
+                if not exists:
+                    for delEProd in cfg:
+                        for delERes in delEProd.result:
+                            if delERes.type == "variable" and delERes.value == prod.name:
+                                # print(delEProd.name, "->", delEProd.result[0].value, end=" ")
+                                # for i in range(len(delEProd.result) - 1):
+                                #     print(delEProd.result[i + 1].value, end=" ")
+                                # print()
 
-                            delERes.value = "e"
+                                delERes.value = "e"
 
-                            print("\t", delEProd.name, "->", delEProd.result[0].value, end=" ")
-                            for i in range(len(delEProd.result) - 1):
-                                print(delEProd.result[i + 1].value, end=" ")
-                            print()
+                                # print("\t", delEProd.name, "->", delEProd.result[0].value, end=" ")
+                                # for i in range(len(delEProd.result) - 1):
+                                #     print(delEProd.result[i + 1].value, end=" ")
+                                # print()
+                else:
+                    for delEProd in cfg:
+                        for delERes in delEProd.result:
+                            if delERes.type == "variable" and delERes.value == prod.name:
+                                i = delEProd.result.index(delERes)
+                                newProd = CFGProduction()
+                                newProd.name = delEProd.name
+                                newProd.result = copy.deepcopy(delEProd.result)
+                                newProd.result[i].value = "e"
+                                cfg.append(newProd)
                 cfg.remove(prod)
-    print("\n\n")
+    # print("\n\n")
 
     # STEP 5: UNIT
-    print("STEP 5: REMOVING UNIT PRODUCTIONS")
+    #print("STEP 5: REMOVING UNIT PRODUCTIONS")
     unitless = False
     while not unitless:
         unitless = True
         deleteBuffer = []
         for prod in cfg:
             if len(prod.result) == 1 and prod.result[0].type == "variable":
-                print(prod.name, "->", prod.result[0].value + ":")
+                # print(prod.name, "->", prod.result[0].value + ":")
                 unitless = False
                 delName = prod.result[0].value
                 prod.result.pop()
@@ -192,21 +211,21 @@ def generate_cnf () -> (list, list):
                             newProd = CFGProduction()
                             newProd.name = prod.name
                             newProd.result = copy.deepcopy(delUProd.result)
-                            print("\t", newProd.name, "->", newProd.result[0].value, end=" ")
-                            if (len(newProd.result) == 2):
-                                print(newProd.result[1].value)
-                            else:
-                                print()
+                            # print("\t", newProd.name, "->", newProd.result[0].value, end=" ")
+                            # if (len(newProd.result) == 2):
+                            #     print(newProd.result[1].value)
+                            # else:
+                            #     print()
                             cfg.append(newProd)
                 deleteBuffer.append(prod)
-                print()
+                # print()
         for item in deleteBuffer:
             if (item in cfg):
                 cfg.remove(item)
-    print("\n")
+    # print("\n")
 
     # STEP 6: REMOVE DUPES
-    print("STEP 6: REMOVING DUPLICATES")
+    # print("STEP 6: REMOVING DUPLICATES")
     for prod in cfg:
         for prod2 in cfg:
             if prod is not prod2:
@@ -221,18 +240,18 @@ def generate_cnf () -> (list, list):
                                 isExact = False
                                 break
                         if isExact:
-                            print(prod2.name, "->", prod2.result[0].value, end=" ")
-                            if (len(prod2.result) == 2):
-                                print(prod2.result[1].value)
-                            else:
-                                print()
+                            # print(prod2.name, "->", prod2.result[0].value, end=" ")
+                            # if (len(prod2.result) == 2):
+                            #     print(prod2.result[1].value)
+                            # else:
+                            #     print()
                             cfg.remove(prod2)
-    print("\n\n")
+    # print("\n\n")
 
     # STEP 7: SORT
-    print("STEP 7: SORTING")
+    # print("STEP 7: SORTING")
     cfg.sort(key = lambda x:x.name)
-    print("\n\n")
+    # print("\n\n")
     term = []
     var = []
     for prod in cfg:
