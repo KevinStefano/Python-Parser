@@ -52,16 +52,17 @@ Literal -> Numbers | Strings | List | Tuple | Dictionary | Iterable Slicer | Non
 Atom -> Identifier | Literal | '(' Atom ')'
 
 
+
 Expression -> ArithmeticOperation | StringOperation | AssignmentOperation | ComparisonOperation | LogicalOperation | IdentityOperation | MembershipOperation | BitwiseOperation | BitshiftOperation | BinaryOperation | Atom
-ArithmeticOperator -> '+' | '-' | '*' | '/' | '%' | '**' | '//'
+ArithmeticOperator -> '+' | '-' | '*' | '/' | '%' | '*' '*' | '/' '/'
 ArithmeticOperation -> (Number) ArithmeticOperator (Number) | '(' ArithmeticOperation ')'
 StringOperation -> (String) '+' (String) | (Identifier) '+' (String) | (String) '+' (Identifier) | (Identifier) '+' (Identifier) | (String) '*' (NaturalNumber) | (String) '*' (Identifier) | (Identifier) '*' (NaturalNumber) | (Identifier) '*' (Identifier) | '(' StringOperation ')'
-NumericAssignmentOperator -> '+=' | '-=' | '*=' | '/=' | '%=' | '**=' | '//=' | '&=' | '|=' | '^=' | '>>=' | '<<='
+NumericAssignmentOperator -> '+' '=' | '-' '=' | '*' '=' | '/' '=' | '%' '=' | '*' '*' '=' | '/' '/' '=' | '&' '=' | '|' '=' | '^' '=' | '>' '>' '=' | '<' '<' '='
 NumericAssignmentOperation -> (Identifier) NumericAssignmentOperator (Number) | (Identifier) NumericAssignmentOperator (Identifier)
-StringAssignmentOperation -> (Identifier) '+=' (String) | (Identifier) '+=' (Identifier) | (Identifier) '*=' (NaturalNumber) | (Identifier) '*=' (Identifier)
+StringAssignmentOperation -> (Identifier) '+' '=' (String) | (Identifier) '+' '=' (Identifier) | (Identifier) '*' '=' (NaturalNumber) | (Identifier) '*' '=' (Identifier)
 AssignmentOperator -> '='
 AssignmentOperation -> (Identifier) AssignmentOperator Atom | NumericAssignmentOperation | StringAssignmentOperation
-ComparisonOperator -> '==' | '!=' | '<' | '>' | '<=' | '=>'
+ComparisonOperator -> '=' '=' | '!' '=' | '<' | '>' | '<' '=' | '=' '>'
 ComparisonOperation -> Atom ComparisonOperator Atom | '(' ComparisonOperation ')'
 LogicalOperator -> 'and' | 'or'
 LogicalOperation -> Atom LogicalOperator Atom | 'not' Expression | '(' LogicalOperation ')'
@@ -69,7 +70,7 @@ IdentityOperation -> Atom 'is' Atom | Atom 'is' 'not' Atom | '(' IdentityOperati
 MembershipOperation -> Atom in (Variable) | '(' MembershipOperation ')'
 BitwiseOperator -> '&' | '|' | '^'
 BitwiseOperation -> (Integer) BitwiseOperator (Integer) | '~' (Integer) | '(' BitwiseOperation ')'
-BitshiftOperator -> '<<' | '>>'
+BitshiftOperator -> '<' '<' | '>' '>'
 BitshiftOperation -> (Integer) BitshiftOperator (NaturalNumber) | '(' BitshiftOperation ')'
 BinaryOperation -> BitwiseOperation | BitshiftOperation
 

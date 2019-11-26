@@ -1,26 +1,44 @@
-symbol = ['{', '}', '(', ')', '[', ']', '.', '"', ',']
-operator = ['+','-',':','*','/','=','>','<','?','|','&','^','%','$','#','!']
+symbol = ['{', '}', '(', ')', '[', ']', '.', '"', ',', "'"]
+operator = ['+','-',':','*','/','=','>','<','?','|','&','^','%','$','#','!', '~', '`', '\\', '@', '_']
 KEY= symbol+operator
 
-space = ' '
-conc = ''
-list = []
+keywords = ['True', 'False', 'None', 'and', 'or', 'not', 'is', 'class', 'def', 'return', 'if', 'elif', 'else', 'while', 'for', 'in', 'break', 'continue', 'import', 'as', 'from', 'raise', 'with', 'pass']
 
-string = '''
-public class Test {
+def ReadFile () -> list:
+    space = ' '
+    conc = ''
+    out = []
+    fin = ""
 
-    5+8
-    print(5+8)
-   public static void main(String args[]) {
+    fileFound = False;
+    while not fileFound:
+        try:
+            fin = open(input("Read from file: "))
+        except FileNotFoundError:
+            print("File is not found. Check to see if you typed in the correct file and try again.")
+            fileFound = False
+        else:
+            fileFound = True
 
-'''
-for i,y in enumerate(string):
-    if y != '\n' and y != space :
-        conc += y
-    if (i+1 < len(string)): 
-        if string[i+1] == space or string[i+1] in KEY or conc in KEY: # if next y == ' '
-            if conc != '':
-                list.append(conc)
-                conc = ''
+    lines = fin.readlines()
+    string = ""
+    for line in lines:
+        string += line
+    print(string)
 
-print(list)
+    for i,y in enumerate(string):
+        if y != '\n' and y != space :
+            conc += y
+        if (i+1 < len(string)): 
+            if string[i+1] == space or string[i+1] in KEY or conc in KEY: # if next y == ' '
+                if conc != '':
+                    if (conc in keywords or conc in KEY):
+                        out.append(conc)
+                    else:
+                        out.append('Abjad')
+                    conc = ''
+
+    print(out)
+
+if __name__ == "__main__":
+    ReadFile()

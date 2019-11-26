@@ -12,7 +12,7 @@ class CFGProduction(object):
 
 def generate_cnf () -> (list, list):
     # FILE MANAGER
-    fin = ""; fout = ""
+    fin = ""
     fileFound = False;
     while not fileFound:
         try:
