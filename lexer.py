@@ -10,7 +10,7 @@ def ReadFile () -> list:
     out = []
     fin = ""
 
-    fileFound = False;
+    fileFound = False
     while not fileFound:
         try:
             fin = open(input("Read from file: "))
@@ -20,16 +20,12 @@ def ReadFile () -> list:
         else:
             fileFound = True
 
-    lines = fin.readlines()
-    string = ""
-    for line in lines:
-        string += line
-
-    for i,y in enumerate(string):
+    for y in fin.read(1):
         if y != '\n' and y != space :
             conc += y
-        if (i+1 < len(string)): 
-            if string[i+1] == space or string[i+1] in KEY or conc in KEY: # if next y == ' '
+        if (y != ""): 
+            print(conc)
+            if y == space or y in KEY or conc in KEY: # if next y == ' '
                 if conc != '':
                     if (conc in keywords or conc in KEY):
                         out.append(conc)

@@ -12,6 +12,7 @@ class CYK:
     def compute(self):
         # Membuat parse table untuk CYK
         self.table = [[[] for x in range(self.count - y)] for y in range(self.count)]
+        print(self.count)
 
         # inisialisasi baris pertama
         for i,word in enumerate(self.input):
@@ -56,8 +57,9 @@ class CYK:
 
 if __name__ == "__main__":
     inp = ReadFile()
-
+    print(inp)
     frozen2 = CYK(inp)
     frozen2.grammar_from_CNF(generate_cnf())
     frozen2.compute()
+    print(frozen2.table)
     frozen2.print_output()
