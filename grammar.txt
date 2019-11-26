@@ -47,7 +47,7 @@ DictVal -> List | Tuple | Number | String
 DictionaryLoop -> DictKey ':' DictVal ',' DictionaryLoop | DictKey ':' DictVal | e
 Dictionary -> '{' DictionaryLoop '}'
 
-Bracket -> List | Tuple | Curly     /// ????
+Bracket -> List | Tuple | Curly
 Literal -> Numbers | Strings | List | Tuple | Dictionary | Iterable Slicer | None
 Atom -> Identifier | Literal | '(' Atom ')'
 
