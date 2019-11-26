@@ -12,6 +12,16 @@
 #IdentifierTail -> 9 
 #IdentifierTail -> True 
 #IdentifierTail -> False 
+#NaturalNumberTail -> 0 
+#NaturalNumberTail -> 1 
+#NaturalNumberTail -> 2 
+#NaturalNumberTail -> 3 
+#NaturalNumberTail -> 4 
+#NaturalNumberTail -> 5 
+#NaturalNumberTail -> 6 
+#NaturalNumberTail -> 7 
+#NaturalNumberTail -> 8 
+#NaturalNumberTail -> 9 
 (Identifier) -> Abjad 
 (Identifier) -> _ 
 (Integer) -> 0 
@@ -210,10 +220,12 @@ Bin100 -> 8
 Bin100 -> 9 
 Bin100 -> True 
 Bin100 -> False 
+Bin100 -> # 
 Bin100 -> newline 
 Bin101 -> tab 
 Bin105 -> tab 
 Bin11 -> , 
+Bin12 -> ) 
 Bin12 -> ) 
 Bin12 -> ) 
 Bin136 -> tab 
@@ -223,14 +235,15 @@ Bin15 -> "
 Bin15 -> " 
 Bin16 -> ' 
 Bin16 -> ' 
-Bin163 -> tab 
-Bin176 -> tab 
+Bin164 -> tab 
+Bin197 -> tab 
 Bin31 -> ] 
 Bin36 -> ] 
 Bin39 -> ] 
 Bin40 -> , 
 Bin40 -> , 
 Bin44 -> } 
+Bin5 -> . 
 Bin95 -> pass 
 Bin95 -> Abjad 
 Bin95 -> _ 
@@ -246,6 +259,7 @@ Bin95 -> 8
 Bin95 -> 9 
 Bin95 -> True 
 Bin95 -> False 
+Bin95 -> # 
 Bin95 -> newline 
 Bin96 -> tab 
 BitwiseOperator -> & 
@@ -268,6 +282,8 @@ Code -> 8
 Code -> 9 
 Code -> True 
 Code -> False 
+Code -> # 
+Comment -> # 
 ComparisonOperator -> < 
 ComparisonOperator -> > 
 DictKey -> 0 
@@ -454,6 +470,7 @@ RunCode -> 8
 RunCode -> 9 
 RunCode -> True 
 RunCode -> False 
+RunCode -> # 
 RunCode -> newline 
 S0 -> pass 
 S0 -> newline 
@@ -471,6 +488,7 @@ S0 -> 8
 S0 -> 9 
 S0 -> True 
 S0 -> False 
+S0 -> # 
 SlicerValue -> 0 
 SlicerValue -> 1 
 SlicerValue -> 2 
@@ -578,6 +596,7 @@ StringLoop -> False
 Term! -> ! 
 Term" -> " 
 Term" -> " 
+Term# -> # 
 Term% -> % 
 Term& -> & 
 Term' -> ' 
@@ -654,10 +673,11 @@ Termn -> n
 Termnot -> not 
 Termo -> o 
 Termp -> p 
+Termpass -> pass 
 Termq -> q 
 Termr -> r 
 Termraise -> raise 
-Termreturn -> return 
+Termraise -> raise 
 Termreturn -> return 
 Terms -> s 
 Termt -> t 
@@ -1008,6 +1028,16 @@ Bin10 -> Variable Term)
 Bin100 -> RunCode ConditionalElif 
 Bin100 -> Code Bin0 
 Bin100 -> Code Bin2 
+Bin100 -> Expression Comment 
+Bin100 -> ConditionalIf Comment 
+Bin100 -> ForLoop Comment 
+Bin100 -> WhileLoop Comment 
+Bin100 -> Import Comment 
+Bin100 -> Class Comment 
+Bin100 -> Def Comment 
+Bin100 -> Termpass Comment 
+Bin100 -> Raise Comment 
+Bin100 -> With Comment 
 Bin100 -> Newline RunCode 
 Bin100 -> Newline Bin1 
 Bin100 -> Termelif Bin104 
@@ -1085,12 +1115,15 @@ Bin100 -> Termfrom Bin134
 Bin100 -> Termclass Bin139 
 Bin100 -> Termclass Bin146 
 Bin100 -> Termdef Bin153 
-Bin100 -> Termdef Bin162 
-Bin100 -> Termdef Bin166 
-Bin100 -> Termdef Bin172 
+Bin100 -> Termdef Bin163 
+Bin100 -> Termdef Bin167 
+Bin100 -> Termdef Bin174 
+Bin100 -> Termdef Bin185 
+Bin100 -> Termdef Bin193 
 Bin100 -> Termraise ImportName 
-Bin100 -> Termraise Bin175 
-Bin100 -> Termwith Bin181 
+Bin100 -> Termraise Bin196 
+Bin100 -> Termwith Bin202 
+Bin100 -> Term# StringLoop 
 Bin101 -> Indentation Bin100 
 Bin101 -> Indentation Termtab 
 Bin102 -> Newline Bin101 
@@ -1156,44 +1189,68 @@ Bin151 -> Term) Bin149
 Bin152 -> Term( Bin151 
 Bin153 -> ImportName Bin152 
 Bin154 -> Indentation Termreturn 
-Bin155 -> RunCode Bin154 
-Bin155 -> Indentation Termreturn 
-Bin156 -> Indentation Bin155 
-Bin157 -> Newline Bin156 
-Bin158 -> Term: Bin157 
-Bin159 -> Term) Bin158 
+Bin155 -> NewLine Bin154 
+Bin156 -> RunCode Bin155 
+Bin156 -> NewLine Bin154 
+Bin157 -> Indentation Bin156 
+Bin158 -> Newline Bin157 
+Bin159 -> Term: Bin158 
 Bin16 -> StringLoop Term' 
-Bin160 -> Parameter Bin159 
-Bin160 -> Term) Bin158 
-Bin161 -> Term( Bin160 
-Bin162 -> ImportName Bin161 
-Bin163 -> Indentation Code 
-Bin163 -> Indentation Termtab 
-Bin164 -> Newline Bin163 
-Bin165 -> Term: Bin164 
-Bin166 -> ImportName Bin165 
-Bin167 -> Indentation Termreturn 
-Bin168 -> Code Bin167 
+Bin160 -> Term) Bin159 
+Bin161 -> Parameter Bin160 
+Bin161 -> Term) Bin159 
+Bin162 -> Term( Bin161 
+Bin163 -> ImportName Bin162 
+Bin164 -> Indentation RunCode 
+Bin164 -> Indentation Termtab 
+Bin165 -> Newline Bin164 
+Bin166 -> Term: Bin165 
+Bin167 -> ImportName Bin166 
 Bin168 -> Indentation Termreturn 
-Bin169 -> Indentation Bin168 
+Bin169 -> NewLine Bin168 
 Bin17 -> Term' Term' 
-Bin170 -> Newline Bin169 
-Bin171 -> Term: Bin170 
-Bin172 -> ImportName Bin171 
-Bin173 -> (String) Term) 
-Bin174 -> Term( Bin173 
-Bin175 -> ImportName Bin174 
-Bin176 -> Indentation RunCode 
-Bin176 -> Indentation Termtab 
-Bin177 -> Newline Bin176 
-Bin178 -> Term: Bin177 
-Bin179 -> ImportName Bin178 
+Bin170 -> RunCode Bin169 
+Bin170 -> NewLine Bin168 
+Bin171 -> Indentation Bin170 
+Bin172 -> Newline Bin171 
+Bin173 -> Term: Bin172 
+Bin174 -> ImportName Bin173 
+Bin175 -> Termreturn Atom 
+Bin176 -> NewLine Bin175 
+Bin177 -> Indentation Bin176 
+Bin178 -> RunCode Bin177 
+Bin178 -> Indentation Bin176 
+Bin179 -> Indentation Bin178 
 Bin18 -> Term' Bin17 
-Bin180 -> Termas Bin179 
-Bin181 -> Identifier Bin180 
+Bin180 -> Newline Bin179 
+Bin181 -> Term: Bin180 
+Bin182 -> Term) Bin181 
+Bin183 -> Parameter Bin182 
+Bin183 -> Term) Bin181 
+Bin184 -> Term( Bin183 
+Bin185 -> ImportName Bin184 
+Bin186 -> Termreturn Atom 
+Bin187 -> NewLine Bin186 
+Bin188 -> Indentation Bin187 
+Bin189 -> RunCode Bin188 
+Bin189 -> Indentation Bin187 
 Bin19 -> StringWithEnterLoop Bin18 
+Bin190 -> Indentation Bin189 
+Bin191 -> Newline Bin190 
+Bin192 -> Term: Bin191 
+Bin193 -> ImportName Bin192 
+Bin194 -> (String) Term) 
+Bin195 -> Term( Bin194 
+Bin196 -> ImportName Bin195 
+Bin197 -> Indentation RunCode 
+Bin197 -> Indentation Termtab 
+Bin198 -> Newline Bin197 
+Bin199 -> Term: Bin198 
 Bin2 -> Newline Bin1 
 Bin20 -> Term' Bin19 
+Bin200 -> ImportName Bin199 
+Bin201 -> Termas Bin200 
+Bin202 -> Identifier Bin201 
 Bin21 -> Term' Bin20 
 Bin22 -> Term" Term" 
 Bin23 -> Term" Bin22 
@@ -1281,6 +1338,16 @@ Bin94 -> BitshiftOperation Term)
 Bin95 -> RunCode ConditionalElif 
 Bin95 -> Code Bin0 
 Bin95 -> Code Bin2 
+Bin95 -> Expression Comment 
+Bin95 -> ConditionalIf Comment 
+Bin95 -> ForLoop Comment 
+Bin95 -> WhileLoop Comment 
+Bin95 -> Import Comment 
+Bin95 -> Class Comment 
+Bin95 -> Def Comment 
+Bin95 -> Termpass Comment 
+Bin95 -> Raise Comment 
+Bin95 -> With Comment 
 Bin95 -> Newline RunCode 
 Bin95 -> Newline Bin1 
 Bin95 -> Termelif Bin104 
@@ -1358,12 +1425,15 @@ Bin95 -> Termfrom Bin134
 Bin95 -> Termclass Bin139 
 Bin95 -> Termclass Bin146 
 Bin95 -> Termdef Bin153 
-Bin95 -> Termdef Bin162 
-Bin95 -> Termdef Bin166 
-Bin95 -> Termdef Bin172 
+Bin95 -> Termdef Bin163 
+Bin95 -> Termdef Bin167 
+Bin95 -> Termdef Bin174 
+Bin95 -> Termdef Bin185 
+Bin95 -> Termdef Bin193 
 Bin95 -> Termraise ImportName 
-Bin95 -> Termraise Bin175 
-Bin95 -> Termwith Bin181 
+Bin95 -> Termraise Bin196 
+Bin95 -> Termwith Bin202 
+Bin95 -> Term# StringLoop 
 Bin96 -> Indentation Bin95 
 Bin96 -> Indentation Termtab 
 Bin97 -> Newline Bin96 
@@ -1409,6 +1479,16 @@ Bracket -> Term[ Bin29
 Bracket -> Term( Bin30 
 Class -> Termclass Bin139 
 Class -> Termclass Bin146 
+Code -> Expression Comment 
+Code -> ConditionalIf Comment 
+Code -> ForLoop Comment 
+Code -> WhileLoop Comment 
+Code -> Import Comment 
+Code -> Class Comment 
+Code -> Def Comment 
+Code -> Termpass Comment 
+Code -> Raise Comment 
+Code -> With Comment 
 Code -> Termif Bin99 
 Code -> Termfor Bin113 
 Code -> Termfor Bin119 
@@ -1421,12 +1501,15 @@ Code -> Termfrom Bin134
 Code -> Termclass Bin139 
 Code -> Termclass Bin146 
 Code -> Termdef Bin153 
-Code -> Termdef Bin162 
-Code -> Termdef Bin166 
-Code -> Termdef Bin172 
+Code -> Termdef Bin163 
+Code -> Termdef Bin167 
+Code -> Termdef Bin174 
+Code -> Termdef Bin185 
+Code -> Termdef Bin193 
 Code -> Termraise ImportName 
-Code -> Termraise Bin175 
-Code -> Termwith Bin181 
+Code -> Termraise Bin196 
+Code -> Termwith Bin202 
+Code -> Term# StringLoop 
 Code -> (Number) Bin46 
 Code -> (Identifier) Bin47 
 Code -> (Number) Bin48 
@@ -1488,6 +1571,7 @@ Code -> Term" Bin26
 Code -> Term[ Bin29 
 Code -> Term( Bin30 
 Code -> Term{ Bin44 
+Comment -> Term# StringLoop 
 ComparisonOperation -> Atom Bin75 
 ComparisonOperation -> Term( Bin76 
 ComparisonOperator -> Term= Term= 
@@ -1500,9 +1584,11 @@ ConditionalIf -> Termif Bin99
 Decimal -> Integer Term. 
 Decimal -> Integer Bin5 
 Def -> Termdef Bin153 
-Def -> Termdef Bin162 
-Def -> Termdef Bin166 
-Def -> Termdef Bin172 
+Def -> Termdef Bin163 
+Def -> Termdef Bin167 
+Def -> Termdef Bin174 
+Def -> Termdef Bin185 
+Def -> Termdef Bin193 
 DictKey -> Term- NaturalNumber 
 DictKey -> NonZeroDigit #NaturalNumberTail 
 DictKey -> Integer Term. 
@@ -1887,12 +1973,14 @@ LoopCode -> Termfrom Bin134
 LoopCode -> Termclass Bin139 
 LoopCode -> Termclass Bin146 
 LoopCode -> Termdef Bin153 
-LoopCode -> Termdef Bin162 
-LoopCode -> Termdef Bin166 
-LoopCode -> Termdef Bin172 
+LoopCode -> Termdef Bin163 
+LoopCode -> Termdef Bin167 
+LoopCode -> Termdef Bin174 
+LoopCode -> Termdef Bin185 
+LoopCode -> Termdef Bin193 
 LoopCode -> Termraise ImportName 
-LoopCode -> Termraise Bin175 
-LoopCode -> Termwith Bin181 
+LoopCode -> Termraise Bin196 
+LoopCode -> Termwith Bin202 
 LoopCode -> (Identifier) Bin64 
 LoopCode -> (Identifier) Bin65 
 LoopCode -> (Identifier) Bin67 
@@ -1973,12 +2061,14 @@ LoopRunCode -> Termfrom Bin134
 LoopRunCode -> Termclass Bin139 
 LoopRunCode -> Termclass Bin146 
 LoopRunCode -> Termdef Bin153 
-LoopRunCode -> Termdef Bin162 
-LoopRunCode -> Termdef Bin166 
-LoopRunCode -> Termdef Bin172 
+LoopRunCode -> Termdef Bin163 
+LoopRunCode -> Termdef Bin167 
+LoopRunCode -> Termdef Bin174 
+LoopRunCode -> Termdef Bin185 
+LoopRunCode -> Termdef Bin193 
 LoopRunCode -> Termraise ImportName 
-LoopRunCode -> Termraise Bin175 
-LoopRunCode -> Termwith Bin181 
+LoopRunCode -> Termraise Bin196 
+LoopRunCode -> Termwith Bin202 
 MembershipOperation -> Atom Bin83 
 MembershipOperation -> Term( Bin84 
 NaturalNumber -> NonZeroDigit #NaturalNumberTail 
@@ -2040,9 +2130,19 @@ NumericAssignmentOperator -> Term< Bin63
 Parameter -> ImportName Term, 
 Parameter -> IdentifierCharacters #IdentifierTail 
 Raise -> Termraise ImportName 
-Raise -> Termraise Bin175 
+Raise -> Termraise Bin196 
 RunCode -> Code Bin0 
 RunCode -> Code Bin2 
+RunCode -> Expression Comment 
+RunCode -> ConditionalIf Comment 
+RunCode -> ForLoop Comment 
+RunCode -> WhileLoop Comment 
+RunCode -> Import Comment 
+RunCode -> Class Comment 
+RunCode -> Def Comment 
+RunCode -> Termpass Comment 
+RunCode -> Raise Comment 
+RunCode -> With Comment 
 RunCode -> Newline RunCode 
 RunCode -> Newline Bin1 
 RunCode -> (Number) Bin46 
@@ -2112,12 +2212,15 @@ RunCode -> Termfrom Bin134
 RunCode -> Termclass Bin139 
 RunCode -> Termclass Bin146 
 RunCode -> Termdef Bin153 
-RunCode -> Termdef Bin162 
-RunCode -> Termdef Bin166 
-RunCode -> Termdef Bin172 
+RunCode -> Termdef Bin163 
+RunCode -> Termdef Bin167 
+RunCode -> Termdef Bin174 
+RunCode -> Termdef Bin185 
+RunCode -> Termdef Bin193 
 RunCode -> Termraise ImportName 
-RunCode -> Termraise Bin175 
-RunCode -> Termwith Bin181 
+RunCode -> Termraise Bin196 
+RunCode -> Termwith Bin202 
+RunCode -> Term# StringLoop 
 RunCode -> (Identifier) Bin64 
 RunCode -> (Identifier) Bin65 
 RunCode -> (Identifier) Bin67 
@@ -2126,6 +2229,16 @@ RunCode -> (Identifier) Bin71
 RunCode -> (Identifier) Bin73 
 S0 -> Code Bin0 
 S0 -> Code Bin2 
+S0 -> Expression Comment 
+S0 -> ConditionalIf Comment 
+S0 -> ForLoop Comment 
+S0 -> WhileLoop Comment 
+S0 -> Import Comment 
+S0 -> Class Comment 
+S0 -> Def Comment 
+S0 -> Termpass Comment 
+S0 -> Raise Comment 
+S0 -> With Comment 
 S0 -> Termif Bin99 
 S0 -> Termfor Bin113 
 S0 -> Termfor Bin119 
@@ -2138,12 +2251,15 @@ S0 -> Termfrom Bin134
 S0 -> Termclass Bin139 
 S0 -> Termclass Bin146 
 S0 -> Termdef Bin153 
-S0 -> Termdef Bin162 
-S0 -> Termdef Bin166 
-S0 -> Termdef Bin172 
+S0 -> Termdef Bin163 
+S0 -> Termdef Bin167 
+S0 -> Termdef Bin174 
+S0 -> Termdef Bin185 
+S0 -> Termdef Bin193 
 S0 -> Termraise ImportName 
-S0 -> Termraise Bin175 
-S0 -> Termwith Bin181 
+S0 -> Termraise Bin196 
+S0 -> Termwith Bin202 
+S0 -> Term# StringLoop 
 S0 -> Newline RunCode 
 S0 -> Newline Bin1 
 S0 -> (Number) Bin46 
@@ -2336,4 +2452,4 @@ Variable -> Identifier Bin7
 Variable -> Identifier Slicer 
 Variable -> Identifier Bin9 
 WhileLoop -> Termwhile Bin123 
-With -> Termwith Bin181 
+With -> Termwith Bin202 

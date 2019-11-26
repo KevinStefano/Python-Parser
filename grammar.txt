@@ -81,7 +81,7 @@ ConditionalElif -> e | 'elif' Atom ':' Newline Indentation RunCode ConditionalEl
 
 ForLoop -> 'for' Variable 'in' Iterable ':' Newline Indentation LoopRunCode | 'for' Variable 'in' Identifier ':' Newline Indentation LoopRunCode
 WhileLoop -> 'while' Atom ':' Newline Indentation LoopRunCode 
-LoopRunCode -> LoopCode | LoopCode NewLine LoopRunCode
+LoopRunCode -> LoopCode | LoopCode Newline LoopRunCode
 LoopCode -> Expression | ConditionalIf | ForLoop | WhileLoop | Import | Class | Def | 'pass' | Raise | With | 'break' | 'continue'
 
 ImportName -> IdentifierCharacters | IdentifierCharacters #IdentifierTail
@@ -92,7 +92,7 @@ BaseClassName -> ImportName | ImportName '.' BaseClassName
 Class -> 'class' ImportName ':' Newline Indentation RunCode | 'class' ImportName '(' BaseClassName ')' ':' Newline Indentation RunCode
 
 Parameter -> e | ImportName ',' | ImportName
-Def -> 'def' ImportName '(' Parameter ')' ':' Newline Indentation RunCode | 'def' ImportName '(' Parameter ')' ':' Newline Indentation RunCode NewLine Indentation 'return' | 'def' ImportName ':' Newline Indentation RunCode | 'def' ImportName ':' Newline Indentation RunCode NewLine Indentation 'return' | 'def' ImportName '(' Parameter ')' ':' Newline Indentation RunCode Indentation NewLine 'return' Atom | 'def' ImportName ':' Newline Indentation RunCode Indentation NewLine 'return' Atom
+Def -> 'def' ImportName '(' Parameter ')' ':' Newline Indentation RunCode | 'def' ImportName '(' Parameter ')' ':' Newline Indentation RunCode Newline Indentation 'return' | 'def' ImportName ':' Newline Indentation RunCode | 'def' ImportName ':' Newline Indentation RunCode Newline Indentation 'return' | 'def' ImportName '(' Parameter ')' ':' Newline Indentation RunCode Newline Indentation 'return' Atom | 'def' ImportName ':' Newline Indentation RunCode Newline Indentation 'return' Atom
 
 Raise -> 'raise' ImportName | 'raise' ImportName '(' (String) ')'
 With -> 'with' Identifier 'as' ImportName ':' Newline Indentation RunCode
