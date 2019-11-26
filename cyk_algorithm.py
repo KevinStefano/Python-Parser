@@ -57,7 +57,7 @@ class CYK:
 
 if __name__ == "__main__":
     inp = ReadFile()
-    print(inp)
+    print(inp)    
     frozen2 = CYK(inp)
     frozen2.grammar_from_CNF(generate_cnf())
     frozen2.compute()

@@ -33,7 +33,10 @@ def ReadFile () -> list:
             if (y != space):
                 conc += y
         else:
-            out.append(conc)
+            if (conc in keywords or conc in KEY):
+                out.append(conc)
+            else:
+                out.append('Abjad')
             break
 
     return out
