@@ -8,7 +8,7 @@ NaturalNumber -> Digit | NonZeroDigit #NaturalNumberTail | Boolean
 (NaturalNumber) -> NaturalNumber | '(' NaturalNumber ')'
 Integer -> NaturalNumber | '-' NaturalNumber
 (Integer) -> Integer | '(' Integer ')'
-Decimal -> Integer '.' | Integer '.' #NaturalNumberTail | Decimal E Integer
+Decimal -> Integer '.' | Integer '.' #NaturalNumberTail
 Boolean -> 'True' | 'False' | ComparisonOperation | LogicalOperation | MembershipOperation
 Number -> Integer | Decimal | ArithmeticOperation | BitshiftOperation | BitwiseOperation
 (Number) -> Number | '(' Number ')'
