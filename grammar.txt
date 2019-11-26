@@ -1,15 +1,15 @@
 RunCode -> Code Newline RunCode | Code | Code Newline Indentation RunCode
-Code -> Expression | ConditionalIf | ForLoop | WhileLoop | Import | Class | Def | 'pass' | Raise | With | e
+Code -> Expression | ConditionalIf | ForLoop | WhileLoop | Import | Class | Def | 'pass' | Raise | With | e | Comment | Expression Comment | ConditionalIf Comment | ForLoop Comment | WhileLoop Comment | Import Comment | Class Comment | Def Comment | 'pass' Comment | Raise Comment | With Comment
 
 NonZeroDigit -> '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'
 Digit -> '0' | NonZeroDigit
-#NaturalNumberTail -> Digit #NaturalNumberTail
+#NaturalNumberTail -> Digit #NaturalNumberTail | e
 NaturalNumber -> Digit | NonZeroDigit #NaturalNumberTail | Boolean
 (NaturalNumber) -> NaturalNumber | '(' NaturalNumber ')'
 Integer -> NaturalNumber | '-' NaturalNumber
 (Integer) -> Integer | '(' Integer ')'
 Decimal -> Integer '.' | Integer '.' #NaturalNumberTail
-Boolean -> 'True' | 'False' | ComparisonOperation | LogicalOperation | MembershipOperation
+Boolean -> 'True' | 'False' | ComparisonOperation | LogicalOperation | MembershipOperation | IdentityOperation
 Number -> Integer | Decimal | ArithmeticOperation | BitshiftOperation | BitwiseOperation
 (Number) -> Number | '(' Number ')'
 
@@ -34,6 +34,7 @@ StringLoop -> StringAcceptedCharacters StringLoop | e
 StringWithEnterLoop -> StringAcceptedCharacters StringWithEnterLoop | Newline StringWithEnterLoop
 String -> '"' StringLoop '"' | ''' StringLoop ''' | ''' ''' ''' StringWithEnterLoop ''' ''' ''' | '"' '"' '"' StringWithEnterLoop '"' '"' '"' | StringOperation
 (String) -> String | '(' String ')'
+Comment -> '#' StringLoop
 
 IterableItemLoop -> Expression ',' IterableItemLoop | Expression
 List -> '[' IterableItemLoop ']'
@@ -69,9 +70,9 @@ LogicalOperation -> Atom LogicalOperator Atom | 'not' Expression | '(' LogicalOp
 IdentityOperation -> Atom 'is' Atom | Atom 'is' 'not' Atom | '(' IdentityOperation ')'
 MembershipOperation -> Atom in (Variable) | '(' MembershipOperation ')'
 BitwiseOperator -> '&' | '|' | '^'
-BitwiseOperation -> (Integer) BitwiseOperator (Integer) | '~' (Integer) | '(' BitwiseOperation ')'
+BitwiseOperation -> (Integer) BitwiseOperator (Integer) | (Integer) BitwiseOperator (Identifier) | (Identifier) BitwiseOperator (Integer) | (Identifier) BitwiseOperator (Identifier) | '~' (Integer) | '~' (Identifier) | '(' BitwiseOperation ')'
 BitshiftOperator -> '<' '<' | '>' '>'
-BitshiftOperation -> (Integer) BitshiftOperator (NaturalNumber) | '(' BitshiftOperation ')'
+BitshiftOperation -> (Integer) BitshiftOperator (NaturalNumber) | (Identifier) BitshiftOperator (NaturalNumber) | (Integer) BitshiftOperator (Identifier) | (Identifier) BitshiftOperator (Identifier) | '(' BitshiftOperation ')'
 BinaryOperation -> BitwiseOperation | BitshiftOperation
 
 
@@ -91,7 +92,7 @@ BaseClassName -> ImportName | ImportName '.' BaseClassName
 Class -> 'class' ImportName ':' Newline Indentation RunCode | 'class' ImportName '(' BaseClassName ')' ':' Newline Indentation RunCode
 
 Parameter -> e | ImportName ',' | ImportName
-Def -> 'def' ImportName '(' Parameter ')' ':' Newline Indentation RunCode | 'def' ImportName '(' Parameter ')' ':' Newline Indentation RunCode Indentation 'return' | 'def' ImportName ':' Newline Indentation Code | 'def' ImportName ':' Newline Indentation Code Indentation 'return'
+Def -> 'def' ImportName '(' Parameter ')' ':' Newline Indentation RunCode | 'def' ImportName '(' Parameter ')' ':' Newline Indentation RunCode NewLine Indentation 'return' | 'def' ImportName ':' Newline Indentation RunCode | 'def' ImportName ':' Newline Indentation RunCode NewLine Indentation 'return' | 'def' ImportName '(' Parameter ')' ':' Newline Indentation RunCode Indentation NewLine 'return' Atom | 'def' ImportName ':' Newline Indentation RunCode Indentation NewLine 'return' Atom
 
 Raise -> 'raise' ImportName | 'raise' ImportName '(' (String) ')'
 With -> 'with' Identifier 'as' ImportName ':' Newline Indentation RunCode

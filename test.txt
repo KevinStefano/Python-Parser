@@ -1,1 +1,3 @@
-from ini import *
+def Kucing:
+	pass
+	return
