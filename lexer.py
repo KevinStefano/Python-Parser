@@ -24,7 +24,6 @@ def ReadFile () -> list:
     string = ""
     for line in lines:
         string += line
-    print(string)
 
     for i,y in enumerate(string):
         if y != '\n' and y != space :
@@ -38,7 +37,8 @@ def ReadFile () -> list:
                         out.append('Abjad')
                     conc = ''
 
-    print(out)
+    return out
 
 if __name__ == "__main__":
-    ReadFile()
+    out = ReadFile()
+    print(out)
