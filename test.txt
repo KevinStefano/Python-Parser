@@ -1,3 +1,7 @@
-def Kucing:
-	pass
-	return fuck
+import time
+NAME = 'result.txt'
+List = [3,4]
+for x in range(3):
+	x=x+1
+
+

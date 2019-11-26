@@ -13,7 +13,7 @@ def ReadFile () -> list:
     fileFound = False
     while not fileFound:
         try:
-            fin = open(input("Read from file: "))
+            fin = open(input("Read input file: "))
         except FileNotFoundError:
             print("File is not found. Check to see if you typed in the correct file and try again.")
             fileFound = False

@@ -12,7 +12,6 @@ class CYK:
     def compute(self):
         # Membuat parse table untuk CYK
         self.table = [[[] for x in range(self.count - y)] for y in range(self.count)]
-        print(self.count)
 
         # inisialisasi baris pertama
         for i,word in enumerate(self.input):
@@ -49,16 +48,28 @@ class CYK:
         start_symbol = "S0"
         final_symbol = [x for x in self.table[-1][0] if x == start_symbol]
         if final_symbol:
-            print("Accepted")
+            print("-----------------------------------Accepted----------------------------------")
+            print('    _         ____     ____  U _____ u   ____      _____   U _____ u   ____ ')   
+            print('U  /"\\  u  U /"___| U /"___| \\| ___"|/ U|  _"\\ u  |_ " _|  \\| ___"|/  |  _"\\   ')
+            print(' \\/ _ \\/   \\| | u   \\| | u    |  _|"   \\| |_) |/    | |     |  _|"   /| | | |  ')
+            print(' / ___ \\    | |/__   | |/__   | |___    |  __/     /| |\\    | |___   U| |_| |\\ ')
+            print('/_/   \\_\\    \\____|   \\____|  |_____|   |_|       u |_|U    |_____|   |____/ u ')
+            print(' \\\\    >>   _// \\\\   _// \\\\   <<   >>   ||>>_     _// \\\\_   <<   >>    |||_    ')
+            print('(__)  (__) (__)(__) (__)(__) (__) (__) (__)__)   (__) (__) (__) (__)  (__)_)   ')
         else:
-            print("Syntax Error")
+            print("------------Syntax Error----------------")
+            print('███████╗██╗   ██╗███╗   ██╗████████╗ █████╗ ██╗  ██╗    ███████╗██████╗ ██████╗  ██████╗ ██████╗ ')
+            print('██╔════╝╚██╗ ██╔╝████╗  ██║╚══██╔══╝██╔══██╗╚██╗██╔╝    ██╔════╝██╔══██╗██╔══██╗██╔═══██╗██╔══██╗')
+            print('███████╗ ╚████╔╝ ██╔██╗ ██║   ██║   ███████║ ╚███╔╝     █████╗  ██████╔╝██████╔╝██║   ██║██████╔╝')
+            print('╚════██║  ╚██╔╝  ██║╚██╗██║   ██║   ██╔══██║ ██╔██╗     ██╔══╝  ██╔══██╗██╔══██╗██║   ██║██╔══██╗')
+            print('███████║   ██║   ██║ ╚████║   ██║   ██║  ██║██╔╝ ██╗    ███████╗██║  ██║██║  ██║╚██████╔╝██║  ██║')
+            print('╚══════╝   ╚═╝   ╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝    ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝')
+                                                                                                 
 
 
 if __name__ == "__main__":
     inp = ReadFile()
-    print(inp)
     frozen2 = CYK(inp)
     frozen2.grammar_from_CNF(generate_cnf())
     frozen2.compute()
-    print(frozen2.table)
     frozen2.print_output()
