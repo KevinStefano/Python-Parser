@@ -20,11 +20,9 @@ def ReadFile () -> list:
         else:
             fileFound = True
 
-    for y in fin.read(1):
-        if y != '\n' and y != space :
-            conc += y
+    while True:
+        y = fin.read(1)
         if (y != ""): 
-            print(conc)
             if y == space or y in KEY or conc in KEY: # if next y == ' '
                 if conc != '':
                     if (conc in keywords or conc in KEY):
@@ -32,6 +30,11 @@ def ReadFile () -> list:
                     else:
                         out.append('Abjad')
                     conc = ''
+            if (y != space):
+                conc += y
+        else:
+            out.append(conc)
+            break
 
     return out
 
