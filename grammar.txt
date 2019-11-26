@@ -1,86 +1,96 @@
+RunCode -> Code RunCode | Code
+Code -> Expression | ConditionalIf | ForLoop | WhileLoop | Import | Class | Def | 'pass' | Raise | With
+
 NonZeroDigit -> '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'
-Digit -> 0 | NonZeroDigit
-NaturalNumber -> Digit | NonZeroDigit #NaturalNumberTail | Boolean
+Digit -> '0' | NonZeroDigit
 #NaturalNumberTail -> Digit #NaturalNumberTail
+NaturalNumber -> Digit | NonZeroDigit #NaturalNumberTail | Boolean
+(NaturalNumber) -> NaturalNumber | '(' NaturalNumber ')'
 Integer -> NaturalNumber | '-' NaturalNumber
-Decimal -> Integer '.' | Integer '.' NaturalNumber
-Boolean -> 'True' | 'False' | ComparisonOperation | LogicalOperation
-NoneType -> 'None' | ComparisonOperation | LogicalOperation
-Number -> Integer | Decimal | Decimal E Integer | ArithmeticOperation
+(Integer) -> Integer | '(' Integer ')'
+Decimal -> Integer '.' | Integer '.' #NaturalNumberTail | Decimal E Integer
+Boolean -> 'True' | 'False' | ComparisonOperation | LogicalOperation | MembershipOperation
+Number -> Integer | Decimal | ArithmeticOperation | BitshiftOperation | BitwiseOperation
+(Number) -> Number | '(' Number ')'
+
+NoneType -> 'None'
+
 AbjadLowerCase -> 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | 'l' | 'm' | 'n' | 'o' | 'p' | 'q' | 'r' | 's' | 't' | 'u' | 'v' | 'w' | 'x' | 'y' | 'z' | 'a' Abjad | 'b' Abjad | 'c' Abjad | 'd' Abjad | 'e' Abjad | 'f' Abjad | 'g' Abjad | 'h' Abjad | 'i' Abjad | 'j' Abjad | 'k' Abjad | 'l' Abjad | 'm' Abjad | 'n' Abjad | 'o' Abjad | 'p' Abjad | 'q' Abjad | 'r' Abjad | 's' Abjad | 't' Abjad | 'u' Abjad | 'v' Abjad | 'w' Abjad | 'x' Abjad | 'y' Abjad | 'z' Abjad 
 AbjadUpperCase -> 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I' | 'J' | 'K' | 'L' | 'M' | 'N' | 'O' | 'P' | 'Q' | 'R' | 'S' | 'T' | 'U' | 'V' | 'W' | 'X' | 'Y' | 'Z' | 'A' Abjad | 'B' Abjad | 'C' Abjad | 'D' Abjad | 'E' Abjad | 'F' Abjad | 'G' Abjad | 'H' Abjad | 'I' Abjad | 'J' Abjad | 'K' Abjad | 'L' Abjad | 'M' Abjad | 'N' Abjad | 'O' Abjad | 'P' Abjad | 'Q' Abjad | 'R' Abjad | 'S' Abjad | 'T' Abjad | 'U' Abjad | 'V' Abjad | 'W' Abjad | 'X' Abjad | 'Y' Abjad | 'Z' Abjad 
-Abjad -> AbjadUpperCase | AbjadLowerCase
-AbjadNumber -> Abjad | Number | AbjadNumber Number | AbjadNumber Abjad
-UnderScoreIdentifier -> '_' | UnderScoreIdentifier AbjadNumber | AbjadNumber UnderScoreIdentifier | AbjadNumber UnderScoreIdentifier AbjadNumber
-Identifier -> Epsilon | UnderScoreIdentifier | Abjad
-Literal -> Numbers | Strings
+Abjad -> AbjadUpperCase | AbjadLowerCase | 'Abjad'
+IdentifierCharacters = 'Abjad' | '_'
+#IdentifierTail -> IdentifierCharacters #IdentifierTail | NaturalNumber #IdentifierTail | e
+Variable -> IdentifierCharacters | IdentifierCharacters #IdentifierTail | Identifier '.' Variable | Identifier Slicer | Identifier '[' Atom ']'
+(Variable) -> Variable | '(' Variable ')'
+AtomLoop -> Atom | Atom ',' AtomLoop | e
+Function -> Variable '(' AtomLoop ')'
+Identifier -> Variable | Function
+(Identifier) -> Identifier | '(' Identifier ')'
+
+Newline -> '\n'
 Indentation -> '\t' | Indentation '\t'
-Epsilon -> 'e'
-StringLoop -> Epslion | StringLoop ',' String | String
-NumberLoop -> Epslion | NumberLoop ',' Number | Number
-AnyType -> List | Tuple | Number | String 
-SomeType -> Number | String | Tuple
-Dictionary -> Epsilon | Dictionary ',' SomeType ':' AnyType | SomeType ':' AnyType
-List -> '[' StringLoop ']' | '[' NumberLoop ']' | '[' List ']' | '[' Tuple ']'
-Tuple -> '(' StringLoop ')' | '(' NumberLoop ')' 
-Curly -> '{' Dictionary '}' | '{' StringLoop '}'
-Bracket -> List | Tuple | Curly
+StringAcceptedCharacters = 'Abjad' | 'UnknownChar' | Identifier | Number
+StringLoop -> StringAcceptedCharacters StringLoop
+StringWithEnterLoop -> StringAcceptedCharacters StringWithEnterLoop | Newline StringWithEnterLoop
+String -> '"' StringLoop '"' | ''' StringLoop ''' | ''' ''' ''' StringWithEnterLoop ''' ''' ''' | '"' '"' '"' StringWithEnterLoop '"' '"' '"' | StringOperation
+(String) -> String | '(' String ')'
 
-Expressions -> ArithmeticOperation | AssignmentOperation | ComparisonOperation | LogicalOperation | IdentityOperation | MembershipOperation | BitwiseOperation | BitshiftOperation | BinaryOperation | Atom
-ArithmeticOperator -> + | | * | / | % | ** | //
-ArithmeticOperation -> Number ArithmeticOperator Number
-AssignmentOperator -> = | += | -= | *= | /= | %= | **= | //= | &= | |= | ^= | >>= | <<=
-AssignmentOperation -> Idenifier AssignmentOperator Literal
-ComparisonOperator -> == | != | < | > | <= | =>
-ComparisonOperation -> Atom ComparisonOperator Atom
-LogicalOperator -> 'and' | 'or' | 'not'
-LogicalOperation -> Atom LogicalOperator Atom
-IdentityOperation -> Atom is Atom
-BitwiseOperator -> & | '|' | ^
-BitwiseOperation -> Integer BitwiseOperator Integer
-BitshiftOperator -> << | >>
-BitshiftOperation -> Integer BitshiftOperator NaturalNumber
-BinaryOperation -> BitwiseOperation | BitshiftOperation | ~BinaryOperation
-Atom -> Identifier | Literal
+IterableItemLoop -> Expression ',' IterableItemLoop | Expression
+List -> '[' IterableItemLoop ']'
+Tuple -> '(' IterableItemLoop ')'
+Iterable -> Tuple | String | List
+SlicerValue -> (Integer) | (Identifier) | e
+Slicer -> '[' SlicerValue ':' SlicerValue ':' SlicerValue ']' | '[' SlicerValue ':' SlicerValue ']' | '[' SlicerValue ']'
+
+DictKey -> Number | String | Tuple
+DictVal -> List | Tuple | Number | String 
+DictionaryLoop -> DictKey ':' DictVal ',' DictionaryLoop | DictKey ':' DictVal | e
+Dictionary -> '{' DictionaryLoop '}'
+
+Bracket -> List | Tuple | Curly     /// ????
+Literal -> Numbers | Strings | List | Tuple | Dictionary | Iterable Slicer | None
+Atom -> Identifier | Literal | '(' Atom ')'
 
 
-Conditional -> ConditionalOperation | ConditionalElseOperation | WhileOperation 
-ConditionalOperator -> 'if' | 'elif' 
-ConditionalOperation -> ConditionalOperator Expression ':' Indentation Code |  ConditionalOperator '(' Expression ')' ':' Indentation Code
-ConditionalElseOperator -> 'else'
-ConditionalElseOperation -> ConditionalOperator ':' Indentation Code
-WhileOperator -> 'while'
-WhileOperation -> WhileOperator Expression ':' Indentation Code |  WhileOperator '(' Expression ')' ':' Indentation Code | WhileOperator Expression ':' Indentation BreakContinueOperation |  WhileOperator '(' Expression ')' ':' Indentation BreakContinueOperation  
+Expression -> ArithmeticOperation | StringOperation | AssignmentOperation | ComparisonOperation | LogicalOperation | IdentityOperation | MembershipOperation | BitwiseOperation | BitshiftOperation | BinaryOperation | Atom
+ArithmeticOperator -> '+' | '-' | '*' | '/' | '%' | '**' | '//'
+ArithmeticOperation -> (Number) ArithmeticOperator (Number) | '(' ArithmeticOperation ')'
+StringOperation -> (String) '+' (String) | (Identifier) '+' (String) | (String) '+' (Identifier) | (Identifier) '+' (Identifier) | (String) '*' (NaturalNumber) | (String) '*' (Identifier) | (Identifier) '*' (NaturalNumber) | (Identifier) '*' (Identifier) | '(' StringOperation ')'
+NumericAssignmentOperator -> '+=' | '-=' | '*=' | '/=' | '%=' | '**=' | '//=' | '&=' | '|=' | '^=' | '>>=' | '<<='
+NumericAssignmentOperation -> (Identifier) NumericAssignmentOperator (Number) | (Identifier) NumericAssignmentOperator (Identifier)
+StringAssignmentOperation -> (Identifier) '+=' (String) | (Identifier) '+=' (Identifier) | (Identifier) '*=' (NaturalNumber) | (Identifier) '*=' (Identifier)
+AssignmentOperator -> '='
+AssignmentOperation -> (Identifier) AssignmentOperator Atom | NumericAssignmentOperation | StringAssignmentOperation
+ComparisonOperator -> '==' | '!=' | '<' | '>' | '<=' | '=>'
+ComparisonOperation -> Atom ComparisonOperator Atom | '(' ComparisonOperation ')'
+LogicalOperator -> 'and' | 'or'
+LogicalOperation -> Atom LogicalOperator Atom | 'not' Expression | '(' LogicalOperation ')'
+IdentityOperation -> Atom 'is' Atom | Atom 'is' 'not' Atom | '(' IdentityOperation ')'
+MembershipOperation -> Atom in (Variable) | '(' MembershipOperation ')'
+BitwiseOperator -> '&' | '|' | '^'
+BitwiseOperation -> (Integer) BitwiseOperator (Integer) | '~' (Integer) | '(' BitwiseOperation ')'
+BitshiftOperator -> '<<' | '>>'
+BitshiftOperation -> (Integer) BitshiftOperator (NaturalNumber) | '(' BitshiftOperation ')'
+BinaryOperation -> BitwiseOperation | BitshiftOperation
 
-Alias -> AsOperator | ImportOperator | AliasOperation
-AsOperator -> 'as'
-ImportOperator -> 'import'
-AliasOperation -> ImportOperator Indentifier AsOperator Identifier | ImportOperator Indentifier 
 
-Code -> PassOperration | ClassOperation | InOperation | ForOperation | FromOperation | IsOperation | RaiseOperation | ReturnOperation | WithOperation
-PassOperator -> 'pass'
-PassOperration -> Indentation Pass
-ClassOperation -> 'class' Indentifier ':' Indentation Code
-InOperation ->  Identifier 'in' List | Number 'in' List | Identifier 'in' String |  Identifier 'in' Tuple | Number 'in' Tuple | Identifier 'in' Identifier
-ForOperation -> 'for' InOperation ':' Indentation Code | 'for' InOperation ':' Indentation CodeB
-FromOperation -> 'from' Identifier AliasOperation
-IsOperator -> Bracket | Boolean | None
-IsOperation -> IsOperator 'is' IsOperator
-RaiseOperation -> Indentation 'raise' Identifier '(' String ')'
-ReturnOperation -> Indentation 'return' Identifier
-WithOperation -> 'with' Identifier AsOperator Identifier ':' Indentation Code
+ConditionalIf -> 'if' Atom ':' Newline Indentation Code ConditionalElif
+ConditionalElif -> e | 'elif' Atom ':' Newline Indentation Code ConditionalElif | 'else' ':' Newline Indentation Code
 
-CodeB -> BreakContinueOperation | PassOperration | ClassOperation | InOperation | ForOperation | FromOperation | IsOperation | RaiseOperation | ReturnOperation | WithOperation
-PassOperator -> 'pass'
-PassOperration -> Indentation Pass
-ClassOperation -> 'class' Indentifier ':' Indentation Code
-InOperation ->  Identifier 'in' List | Number 'in' List | Identifier 'in' String |  Identifier 'in' Tuple | Number 'in' Tuple | Identifier 'in' Identifier
-ForOperation -> 'for' InOperation ':' Indentation Code | 'for' InOperation ':' Indentation CodeB
-FromOperation -> 'from' Identifier AliasOperation
-IsOperator -> Bracket | Boolean | None
-IsOperation -> IsOperator 'is' IsOperator
-RaiseOperation -> Indentation 'raise' Identifier '(' String ')'
-ReturnOperation -> Indentation 'return' Identifier
-WithOperation -> 'with' Identifier AsOperator Identifier ':' Indentation Code
-BreakContinueOperator -> 'break' | 'continue'
-BreakContinueOperation -> BreakContinueOperator
+ForLoop -> 'for' Variable 'in' Iterable ':' Newline Indentation LoopRunCode | 'for' Variable 'in' Identifier ':' Newline Indentation LoopRunCode
+WhileLoop -> 'while' Atom ':' Newline Indentation LoopRunCode 
+LoopRunCode -> LoopCode | LoopCode LoopRunCode
+LoopCode -> Expression | ConditionalIf | ForLoop | WhileLoop | Import | Class | Def | 'pass' | Raise | With | 'break' | 'continue'
+
+ImportName -> IdentifierCharacters | IdentifierCharacters #IdentifierTail
+FromName -> ImportName FromName | '.' FromName | ImportName | '.'
+Import -> 'import' ImportName | 'from' FromName 'import' ImportName | 'import' ImportName 'as' ImportName | 'from' FromName 'import' ImportName 'as' ImportName
+
+BaseClassName -> ImportName | ImportName '.' BaseClassName
+Class -> 'class' ImportName ':' Newline Indentation Code | 'class' ImportName '(' BaseClassName ')' ':' Newline Indentation Code
+
+Parameter -> e | ImportName ',' | ImportName
+Def -> 'def' ImportName '(' Parameter ')' ':' Newline Indentation Code | 'def' ImportName '(' Parameter ')' ':' Newline Indentation Code Indentation 'return'
+
+Raise -> 'raise' ImportName | 'raise' ImportName '(' (String) ')'
+With -> 'with' Identifier 'as' ImportName ':' Newline Indentation Code
