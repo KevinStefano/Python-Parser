@@ -1,5 +1,5 @@
-symbol = ['{', '}', '(', ')', '[', ']', '.', '"', ',', "'"]
-operator = ['+','-',':','*','/','=','>','<','?','|','&','^','%','$','#','!', '~', '`', '\\', '@', '_']
+symbol = ['{', '}', '(', ')', '[', ']', '.', '"', ',', "'", '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+operator = ['+','-',':','*','/','=','>','<','?','|','&','^','%','$','#','!', '~', '`', '\\', '@', '_', '\t', '\n']
 KEY= symbol+operator
 
 keywords = ['True', 'False', 'None', 'and', 'or', 'not', 'is', 'class', 'def', 'return', 'if', 'elif', 'else', 'while', 'for', 'in', 'break', 'continue', 'import', 'as', 'from', 'raise', 'with', 'pass']
@@ -25,7 +25,11 @@ def ReadFile () -> list:
         if (y != ""): 
             if y == space or y in KEY or conc in KEY: # if next y == ' '
                 if conc != '':
-                    if (conc in keywords or conc in KEY):
+                    if conc == "\n":
+                        out.append("newline")
+                    elif conc == "\t":
+                        out.append("tab")
+                    elif (conc in keywords or conc in KEY):
                         out.append(conc)
                     else:
                         out.append('Abjad')
@@ -33,7 +37,11 @@ def ReadFile () -> list:
             if (y != space):
                 conc += y
         else:
-            if (conc in keywords or conc in KEY):
+            if conc == "\n":
+                out.append("newline")
+            elif conc == "\t":
+                out.append("tab")
+            elif (conc in keywords or conc in KEY):
                 out.append(conc)
             else:
                 out.append('Abjad')

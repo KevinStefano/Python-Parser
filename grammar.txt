@@ -1,5 +1,5 @@
-RunCode -> Code RunCode | Code
-Code -> Expression | ConditionalIf | ForLoop | WhileLoop | Import | Class | Def | 'pass' | Raise | With
+RunCode -> Code Newline RunCode | Code | Code Newline Indentation RunCode
+Code -> Expression | ConditionalIf | ForLoop | WhileLoop | Import | Class | Def | 'pass' | Raise | With | e
 
 NonZeroDigit -> '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'
 Digit -> '0' | NonZeroDigit
@@ -27,8 +27,8 @@ Function -> Variable '(' AtomLoop ')'
 Identifier -> Variable | Function
 (Identifier) -> Identifier | '(' Identifier ')'
 
-Newline -> '\n'
-Indentation -> '\t' | Indentation '\t'
+Newline -> 'newline'
+Indentation -> 'tab' | Indentation 'tab'
 StringAcceptedCharacters -> 'Abjad' | 'UnknownChar' | Identifier | Number | '+' | '-' | ':' | '*' | '/' | '=' | '>' | '<' | '?' | '|' | '&' | '^' | '%' | '$' | '#' | '!' | '~' | '`' | '\\' | '@' | '_' | '{' | '}' | '(' |  ')' | '[' | ']' | '.' | '"' | ',' | "'"
 StringLoop -> StringAcceptedCharacters StringLoop | e
 StringWithEnterLoop -> StringAcceptedCharacters StringWithEnterLoop | Newline StringWithEnterLoop
@@ -48,14 +48,14 @@ DictionaryLoop -> DictKey ':' DictVal ',' DictionaryLoop | DictKey ':' DictVal |
 Dictionary -> '{' DictionaryLoop '}'
 
 Bracket -> List | Tuple | Curly
-Literal -> Numbers | String | List | Tuple | Dictionary | Iterable Slicer | None
+Literal -> Number | String | List | Tuple | Dictionary | Iterable Slicer | None
 Atom -> Identifier | Literal | '(' Atom ')'
 
 
 
 Expression -> ArithmeticOperation | StringOperation | AssignmentOperation | ComparisonOperation | LogicalOperation | IdentityOperation | MembershipOperation | BitwiseOperation | BitshiftOperation | BinaryOperation | Atom
 ArithmeticOperator -> '+' | '-' | '*' | '/' | '%' | '*' '*' | '/' '/'
-ArithmeticOperation -> (Number) ArithmeticOperator (Number) | '(' ArithmeticOperation ')'
+ArithmeticOperation -> (Number) ArithmeticOperator (Number) | (Identifier) ArithmeticOperator (Number) | (Number) ArithmeticOperator (Identifier) | (Identifier) ArithmeticOperator (Identifier) | '(' ArithmeticOperation ')'
 StringOperation -> (String) '+' (String) | (Identifier) '+' (String) | (String) '+' (Identifier) | (Identifier) '+' (Identifier) | (String) '*' (NaturalNumber) | (String) '*' (Identifier) | (Identifier) '*' (NaturalNumber) | (Identifier) '*' (Identifier) | '(' StringOperation ')'
 NumericAssignmentOperator -> '+' '=' | '-' '=' | '*' '=' | '/' '=' | '%' '=' | '*' '*' '=' | '/' '/' '=' | '&' '=' | '|' '=' | '^' '=' | '>' '>' '=' | '<' '<' '='
 NumericAssignmentOperation -> (Identifier) NumericAssignmentOperator (Number) | (Identifier) NumericAssignmentOperator (Identifier)
@@ -75,23 +75,23 @@ BitshiftOperation -> (Integer) BitshiftOperator (NaturalNumber) | '(' BitshiftOp
 BinaryOperation -> BitwiseOperation | BitshiftOperation
 
 
-ConditionalIf -> 'if' Atom ':' Newline Indentation Code ConditionalElif
-ConditionalElif -> e | 'elif' Atom ':' Newline Indentation Code ConditionalElif | 'else' ':' Newline Indentation Code
+ConditionalIf -> 'if' Atom ':' Newline Indentation RunCode ConditionalElif
+ConditionalElif -> e | 'elif' Atom ':' Newline Indentation RunCode ConditionalElif | 'else' ':' Newline Indentation RunCode
 
 ForLoop -> 'for' Variable 'in' Iterable ':' Newline Indentation LoopRunCode | 'for' Variable 'in' Identifier ':' Newline Indentation LoopRunCode
 WhileLoop -> 'while' Atom ':' Newline Indentation LoopRunCode 
-LoopRunCode -> LoopCode | LoopCode LoopRunCode
+LoopRunCode -> LoopCode | LoopCode NewLine LoopRunCode
 LoopCode -> Expression | ConditionalIf | ForLoop | WhileLoop | Import | Class | Def | 'pass' | Raise | With | 'break' | 'continue'
 
 ImportName -> IdentifierCharacters | IdentifierCharacters #IdentifierTail
 FromName -> ImportName FromName | '.' FromName | ImportName | '.'
-Import -> 'import' ImportName | 'from' FromName 'import' ImportName | 'import' ImportName 'as' ImportName | 'from' FromName 'import' ImportName 'as' ImportName
+Import -> 'import' ImportName | 'from' FromName 'import' ImportName | 'import' ImportName 'as' ImportName | 'from' FromName 'import' ImportName 'as' ImportName | 'from' FromName 'import' '*'
 
 BaseClassName -> ImportName | ImportName '.' BaseClassName
-Class -> 'class' ImportName ':' Newline Indentation Code | 'class' ImportName '(' BaseClassName ')' ':' Newline Indentation Code
+Class -> 'class' ImportName ':' Newline Indentation RunCode | 'class' ImportName '(' BaseClassName ')' ':' Newline Indentation RunCode
 
 Parameter -> e | ImportName ',' | ImportName
-Def -> 'def' ImportName '(' Parameter ')' ':' Newline Indentation Code | 'def' ImportName '(' Parameter ')' ':' Newline Indentation Code Indentation 'return'
+Def -> 'def' ImportName '(' Parameter ')' ':' Newline Indentation RunCode | 'def' ImportName '(' Parameter ')' ':' Newline Indentation RunCode Indentation 'return' | 'def' ImportName ':' Newline Indentation Code | 'def' ImportName ':' Newline Indentation Code Indentation 'return'
 
 Raise -> 'raise' ImportName | 'raise' ImportName '(' (String) ')'
-With -> 'with' Identifier 'as' ImportName ':' Newline Indentation Code
+With -> 'with' Identifier 'as' ImportName ':' Newline Indentation RunCode
