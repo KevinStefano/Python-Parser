@@ -3,8 +3,8 @@
 ## Anggota Kelompok
 
 - 13518041 Samuel
-- 13518107 Chokyi Ozer
 - 13518104 Kevin Austin Stefano
+- 13518107 Chokyi Ozer
 
 ## Requirements
 
