@@ -1,4 +1,4 @@
-# Tubes 2 IF2124 - Teori Bahasa Formal dan Otomata
+# Python Parser
 
 ## Anggota Kelompok
 
